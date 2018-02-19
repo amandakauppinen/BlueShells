@@ -1,11 +1,13 @@
 fileFormatVersion: 2
 guid: 7edbd58dacc68524e8e78fec6fdb62f7
-timeCreated: 1518601360
+timeCreated: 1519032467
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: New Piskel (4)_0
     21300002: New Piskel (4)_1
+    21300004: New Piskel (4)_2
+    21300006: New Piskel (4)_3
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -80,9 +82,9 @@ TextureImporter:
       name: New Piskel (4)_0
       rect:
         serializedVersion: 2
-        x: 88
+        x: 89
         y: 616
-        width: 88
+        width: 86
         height: 88
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -95,6 +97,34 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 264
+        y: 616
+        width: 88
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: New Piskel (4)_2
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 616
+        width: 88
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: New Piskel (4)_3
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 616
         width: 88
         height: 88
