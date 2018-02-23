@@ -150,7 +150,7 @@ public class UPASession {
 		TextureImporter texImp = AssetImporter.GetAtPath(path) as TextureImporter; 
 		
 		if (type == TextureType.texture)
-			texImp.textureType = TextureImporterType.Image;
+			texImp.textureType = TextureImporterType.Default;
 		else if (type == TextureType.sprite) {
 			texImp.textureType = TextureImporterType.Sprite;
 
