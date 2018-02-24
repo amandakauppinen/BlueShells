@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour {
 			myRigidbody.velocity = new Vector2 (0f, myRigidbody.velocity.y);
 		}
 
-		if (Input.GetAxisRaw ("Vertical") < 0.5f || Input.GetAxisRaw ("Vertical") > -0.5f)
+		if (Input.GetAxisRaw ("Vertical") < 0.5f && Input.GetAxisRaw ("Vertical") > -0.5f)
 		{ 
 			myRigidbody.velocity = new Vector2 ( myRigidbody.velocity.x, 0f);
 		}
