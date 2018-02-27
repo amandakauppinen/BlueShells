@@ -44,17 +44,17 @@ TagManager:
   - name: Ground
     uniqueID: 3845763573
     locked: 0
-  - name: Walls
+  - name: Wall
     uniqueID: 1293725197
     locked: 0
-  - name: WallFloor
+  - name: TopWall
     uniqueID: 1433806595
-    locked: 0
-  - name: Player
-    uniqueID: 3443138775
     locked: 0
   - name: Furniture
     uniqueID: 3691791987
+    locked: 0
+  - name: Player
+    uniqueID: 3443138775
     locked: 0
   - name: TopFurniture
     uniqueID: 3732470687
