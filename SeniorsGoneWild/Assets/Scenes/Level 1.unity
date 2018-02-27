@@ -1061,8 +1061,9 @@ GameObject:
   - component: {fileID: 61344709}
   - component: {fileID: 61344712}
   - component: {fileID: 61344713}
+  - component: {fileID: 61344714}
   m_Layer: 0
-  m_Name: Enemies_0
+  m_Name: Nurse1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1142,8 +1143,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 61344708}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.618, y: -15.536, z: 0}
-  m_LocalScale: {x: 0.4954454, y: 0.45127606, z: 1}
+  m_LocalPosition: {x: 9.74, y: -20.97, z: 0}
+  m_LocalScale: {x: 0.5658838, y: 0.4409563, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -1180,8 +1181,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  timeBetweenMove: 2
-  timeToMove: 1
+  timeBetweenMove: 0
+  timeToMove: 0
+--- !u!95 &61344714
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 61344708}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2c8c971dbd64b97428d09068aec04521, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &61945146
 GameObject:
   m_ObjectHideFlags: 0
@@ -7566,7 +7584,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 503781540}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25.2, y: -24.3, z: 0}
+  m_LocalPosition: {x: 17.51, y: -22.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8795,11 +8813,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4597651416557298, guid: acec18b84d502414c9aacffc2b5206a6, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -6.96
+      value: 9.94
       objectReference: {fileID: 0}
     - target: {fileID: 4597651416557298, guid: acec18b84d502414c9aacffc2b5206a6, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.22
+      value: -15.21
       objectReference: {fileID: 0}
     - target: {fileID: 4597651416557298, guid: acec18b84d502414c9aacffc2b5206a6, type: 2}
       propertyPath: m_LocalPosition.z
@@ -26764,8 +26782,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2066668569}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.354088, y: -16.25, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 10.64, y: -15.801, z: 0}
+  m_LocalScale: {x: 1.2101011, y: 1.3301585, z: 1}
   m_Children: []
   m_Father: {fileID: 460021201}
   m_RootOrder: 15

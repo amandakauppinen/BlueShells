@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class NurseController : MonoBehaviour {
 
+	//private Animator anim;
+
 	public float moveSpeed;
 
 	private Rigidbody2D myRigidBody;
@@ -12,6 +14,7 @@ public class NurseController : MonoBehaviour {
 
 	public float timeBetweenMove;
 	private float timeBewtweenMoveCounter;
+
 	public float timeToMove;
 	private float timeToMoveCounter;
 
@@ -20,6 +23,8 @@ public class NurseController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		//anim = GetComponent<Animator> ();
+
 		myRigidBody = GetComponent<Rigidbody2D> ();
 
 		timeBewtweenMoveCounter = timeBetweenMove;
@@ -53,11 +58,10 @@ public class NurseController : MonoBehaviour {
 				timeToMoveCounter = timeToMove;
 
 				moveDirection = new Vector3 (Random.Range (-1f, 1f) * moveSpeed, Random.Range(-1f, 1f)* moveSpeed, 0f) ;
-
+				}
 			}
-				
-		}
-
+	
+		//anim.SetFloat (
 	}
 
 }
