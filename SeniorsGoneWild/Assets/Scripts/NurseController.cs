@@ -20,6 +20,10 @@ public class NurseController : MonoBehaviour {
 
 	private Vector3 moveDirection;
 
+	public float waitToBeload;
+	private bool reloading;
+
+	private GameObject thePlayer;
 
 	// Use this for initialization
 	void Start () {
@@ -62,8 +66,24 @@ public class NurseController : MonoBehaviour {
 				moveDirection = new Vector3 (Random.Range (-1f, 1f) * moveSpeed, Random.Range(-1f, 1f)* moveSpeed, 0f) ;
 				}
 			}
-	
+		if (reloading) {
+			waitToBeload -= Time.deltaTime;
+			if (waitToBeload < 0) {
+				Application.LoadLevel (Application.loadedLevel);
+				thePlayer.SetActive (true);
+			}
+		}
 		//anim.SetFloat (
 	}
 
+	void OnCollisionEnter2D(Collision2D other)
+	{
+		if (other.gameObject.name == "Player")
+		{
+		//Destroy (other.gameObject);
+			other.gameObject.SetActive(false);
+			reloading = true;
+			thePlayer = other.gameObject;
+		}
+	}
 }
