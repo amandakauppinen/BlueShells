@@ -56,6 +56,12 @@ TagManager:
   - name: Player
     uniqueID: 3443138775
     locked: 0
+  - name: SecretItem
+    uniqueID: 1447672881
+    locked: 0
   - name: TopFurniture
     uniqueID: 3732470687
+    locked: 0
+  - name: Item
+    uniqueID: 139295781
     locked: 0
