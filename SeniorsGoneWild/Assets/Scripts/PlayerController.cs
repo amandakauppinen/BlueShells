@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
@@ -14,8 +15,17 @@ public class PlayerController : MonoBehaviour {
 
 	private static bool playerExists;
 
+	public int count;
+	public Text countText;
+	public Text winText;
+
 	// Use this for initialization
 	void Start () {
+
+		count = 0;
+		winText.text = "";
+		SetCountText ();
+
 		anim = GetComponent<Animator> ();
 		myRigidbody = GetComponent<Rigidbody2D> ();
 
@@ -68,5 +78,24 @@ public class PlayerController : MonoBehaviour {
 		anim.SetBool ("PlayerMoving", playerMoving);
 		anim.SetFloat("LastMoveX", lastMove.x);
 		anim.SetFloat("LastMoveY", lastMove.y);
+	}
+
+	void OnTriggerEnter2D(Collider2D other) 
+	{
+		//Check the provided Collider2D parameter other to see if it is tagged "PickUp", if it is...
+		if (other.gameObject.CompareTag("Items"))
+		{
+			other.gameObject.SetActive(false);
+			count = count + 1;
+			SetCountText ();
+		}
+	}
+
+	void SetCountText()
+	{
+		countText.text = "Item Count: " + count.ToString ();
+		if (count >= 4)
+			winText.text = "You've collected all your items!";
+		
 	}
 }
