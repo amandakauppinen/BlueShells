@@ -12,7 +12,7 @@ Don't forget to collect all the items<br>
 The game is made using Unity. It's coded with C#
 <br>
 
-##Contributors
+## Contributors
 
 <br>
 Amanda (amandakauppinen)
