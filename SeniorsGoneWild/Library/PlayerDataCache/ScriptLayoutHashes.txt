@@ -141,3 +141,4 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.Spa
 57836d8a96b7d1efe165d19972cb57af Assembly-CSharp.dll:.PlayerStartPoint
 776615fa38a8e0b2e32afb78a6079147 Assembly-CSharp.dll:.DialogueManager
 74bdfe3150293437bfa63a797afb4793 Assembly-CSharp.dll:.CameraController
+20c5b8f1fc21aaa0bbb1fb1a635fe31b Assembly-CSharp.dll:.ExitGame

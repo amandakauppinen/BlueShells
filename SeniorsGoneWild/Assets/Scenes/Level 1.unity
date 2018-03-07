@@ -1191,7 +1191,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 61344708}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 2c8c971dbd64b97428d09068aec04521, type: 2}
   m_CullingMode: 0
@@ -4755,7 +4755,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 326590202}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 2c8c971dbd64b97428d09068aec04521, type: 2}
   m_CullingMode: 0
@@ -4874,7 +4874,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 326590202}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 51.06, y: -23.05, z: 10}
+  m_LocalPosition: {x: 54.79, y: -24.03, z: 10}
   m_LocalScale: {x: 0.5658838, y: 0.4409563, z: 1}
   m_Children: []
   m_Father: {fileID: 1525188176}
@@ -7717,7 +7717,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 497244478}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 2c8c971dbd64b97428d09068aec04521, type: 2}
   m_CullingMode: 0
@@ -7836,7 +7836,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 497244478}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 46.26, y: -17.85, z: 10}
+  m_LocalPosition: {x: 43.71, y: -18.24, z: 10}
   m_LocalScale: {x: 0.5658838, y: 0.4409563, z: 1}
   m_Children: []
   m_Father: {fileID: 1525188176}
@@ -8116,7 +8116,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 503781540}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.76, y: 0.18, z: 0}
+  m_LocalPosition: {x: 1.32, y: 1.07, z: 0}
   m_LocalScale: {x: 1.1721609, y: 1.1721609, z: 1.1721609}
   m_Children: []
   m_Father: {fileID: 0}
@@ -22696,8 +22696,8 @@ MonoBehaviour:
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Win Text
 --- !u!222 &1560154071
@@ -29407,6 +29407,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2140674489}
   - component: {fileID: 2140674490}
+  - component: {fileID: 2140674491}
   m_Layer: 0
   m_Name: Level2Furniture_4
   m_TagString: Untagged
@@ -29469,6 +29470,31 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!61 &2140674491
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2140674488}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.371552, y: -2.3873558}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.66, y: 5.4}
+    newSize: {x: 2.66, y: 5.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.9168959, y: 0.62528825}
+  m_EdgeRadius: 0
 --- !u!1 &2141547362
 GameObject:
   m_ObjectHideFlags: 0

@@ -95,7 +95,7 @@ public class PlayerController : MonoBehaviour {
 	{
 		countText.text = "Item Count: " + count.ToString ();
 		if (count >= 4)
-			winText.text = "You've collected all your items! Now Hurry and escape!";
+			winText.text = "You've collected all your items! Now hurry and escape!";
 		
 	}
 }
