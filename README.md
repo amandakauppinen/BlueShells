@@ -13,6 +13,7 @@ The game is made using Unity. It's coded with C#
 <br>
 
 ##Contributors
+
 <br>
 Amanda (amandakauppinen)
 <br>
