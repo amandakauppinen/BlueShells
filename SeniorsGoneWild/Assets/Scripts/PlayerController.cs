@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour {
 
 	private static bool playerExists;
 
-	public int count;
+	public static int count;
 	public Text countText;
 	public Text winText;
 
@@ -95,7 +95,7 @@ public class PlayerController : MonoBehaviour {
 	{
 		countText.text = "Item Count: " + count.ToString ();
 		if (count >= 4)
-			winText.text = "You've collected all your items!";
+			winText.text = "You've collected all your items! Now Hurry and escape!";
 		
 	}
 }
