@@ -2,17 +2,25 @@
 using System;
 using System.Data;
 using Mono.Data.Sqlite;
+using System.Collections.Generic;
 
 public class HighScoreManager : MonoBehaviour {
 
 	private string connectionString;
+	private List<HighScore> highscores = new List<HighScore> ();
+
+	public GameObject scorePrefab; 
+
+	public Transform scoreParent;
+
 
 	// Use this for initialization
 	void Start () {
 		connectionString = "URI=file:" + Application.dataPath + "/HighScoreDB.sqlite";
-		//InsertScore ("Kenneth", 10);
-		DeleteScore(2);
-		GetScores ();
+		InsertScore ("Kenneth", 10);
+
+		//GetScores ();
+		ShowScores();
 	}
 
 	// Update is called once per frame
@@ -40,6 +48,8 @@ public class HighScoreManager : MonoBehaviour {
 
 	private void GetScores()
 	{
+		highscores.Clear ();
+
 		using (IDbConnection dbConnection = new SqliteConnection (connectionString)) 
 		{
 			dbConnection.Open ();
@@ -54,7 +64,8 @@ public class HighScoreManager : MonoBehaviour {
 				{
 					while (reader.Read ()) 
 					{
-						Debug.Log (reader.GetString (1)+ "- " + reader.GetInt32(2));
+						highscores.Add(new HighScore(reader.GetInt32(0),reader.GetInt32(2),reader.GetString(1)));
+							//with date and time add to the end: reader.GetDateTime(3);
 					}
 
 					dbConnection.Close ();
@@ -81,6 +92,26 @@ public class HighScoreManager : MonoBehaviour {
 
 
 			}
+		}
+	}
+
+	private void ShowScores() 
+	{
+		GetScores ();
+		for (int i = 0; i < highscores.Count; i++)
+		{
+			GameObject tmpObject = Instantiate(scorePrefab);
+			HighScore tmpScore = highscores[i];
+
+			tmpObject.GetComponent<HighScoreScript> ().SetScore (tmpScore.Name, tmpScore.Score.ToString(), "#" + (i + 1).ToString ());
+			//changes scoreboard information. Puts # Before the rank number. 
+			//i +1 means 0+1, so it's gonna start ranks from 1 instead of 0 and it will keep increasing it by 1.
+
+
+			tmpObject.transform.SetParent(scoreParent);
+
+			tmpObject.GetComponent<RectTransform> ().localScale = new Vector3 (1, 1, 1);
+		
 		}
 	}
 }
