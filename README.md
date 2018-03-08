@@ -9,7 +9,7 @@ Don't forget to collect all the items<br>
 
 ## Other Information
 <br>
-The game is made using Unity. It's coded with C#
+This game is our school project for learing the basics of game development. It is made using Unity and coded with C#.
 <br>
 
 ## Contributors
