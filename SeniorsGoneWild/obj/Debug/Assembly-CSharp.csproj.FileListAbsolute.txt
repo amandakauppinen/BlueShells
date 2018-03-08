@@ -62,3 +62,5 @@ C:\Users\Am\Documents\BlueShells\BlueShells\SeniorsGoneWild\Temp\bin\Debug\Unity
 C:\Users\Am\Documents\BlueShells\BlueShells\SeniorsGoneWild\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 C:\Users\Am\Documents\BlueShells\BlueShells\SeniorsGoneWild\obj\Debug\Assembly-CSharp.dll
 C:\Users\Am\Documents\BlueShells\BlueShells\SeniorsGoneWild\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Jay\Documents\BlueShells\BlueShells\SeniorsGoneWild\Temp\bin\Debug\Mono.Data.Sqlite.dll
+C:\Users\Jay\Documents\BlueShells\BlueShells\SeniorsGoneWild\Temp\bin\Debug\System.Data.dll
