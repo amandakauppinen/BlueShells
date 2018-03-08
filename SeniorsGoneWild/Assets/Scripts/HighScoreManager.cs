@@ -7,7 +7,7 @@ using System.Collections.Generic;
 public class HighScoreManager : MonoBehaviour {
 
 	private string connectionString;
-	private List<HighScore> highscores = new List<HighScore> ();
+	private List<HighScore> highScores = new List<HighScore> ();
 
 	public GameObject scorePrefab; 
 
@@ -35,7 +35,7 @@ public class HighScoreManager : MonoBehaviour {
 
 			using (IDbCommand dbCmd = dbConnection.CreateCommand ()) 
 			{
-				string sqlQuery = String.Format("insert into HighScores (Name, Score) values (\"{0}\",\"{1}\")",name,newScore);
+				string sqlQuery = String.Format("INSERT INTO HighScores (Name, Score) values (\"{0}\",\"{1}\")",name,newScore);
 
 				dbCmd.CommandText = sqlQuery;
 				dbCmd.ExecuteScalar();
@@ -48,7 +48,7 @@ public class HighScoreManager : MonoBehaviour {
 
 	private void GetScores()
 	{
-		highscores.Clear ();
+		highScores.Clear ();
 
 		using (IDbConnection dbConnection = new SqliteConnection (connectionString)) 
 		{
@@ -64,7 +64,7 @@ public class HighScoreManager : MonoBehaviour {
 				{
 					while (reader.Read ()) 
 					{
-						highscores.Add(new HighScore(reader.GetInt32(0),reader.GetInt32(2),reader.GetString(1)));
+						highScores.Add(new HighScore(reader.GetInt32(0),reader.GetInt32(2),reader.GetString(1)));
 							//with date and time add to the end: reader.GetDateTime(3);
 					}
 
@@ -98,12 +98,12 @@ public class HighScoreManager : MonoBehaviour {
 	private void ShowScores() 
 	{
 		GetScores ();
-		for (int i = 0; i < highscores.Count; i++)
+		for (int i = 0; i < highScores.Count; i++)
 		{
 			GameObject tmpObject = Instantiate(scorePrefab);
-			HighScore tmpScore = highscores[i];
+			HighScore tmpScore = highScores[i];
 
-			tmpObject.GetComponent<HighScoreScript> ().SetScore (tmpScore.Name, tmpScore.Score.ToString(), "#" + (i + 1).ToString ());
+			tmpObject.GetComponent<HighScoreScript> ().SetScore(tmpScore.Name, tmpScore.Score.ToString(), "#" + (i + 1).ToString ());
 			//changes scoreboard information. Puts # Before the rank number. 
 			//i +1 means 0+1, so it's gonna start ranks from 1 instead of 0 and it will keep increasing it by 1.
 
