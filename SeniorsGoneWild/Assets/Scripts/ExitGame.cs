@@ -6,20 +6,22 @@ public class ExitGame : MonoBehaviour {
 
 	public string levelToLoad;
 
-	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 
 	}
 
-	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
 
 	}
 
-	void OnTriggerEnter2D (Collider2D other){
-
-		if (other.gameObject.name == "Player") {
-
+	void OnTriggerEnter2D (Collider2D other)
+	{
+		//Script used for the final game exit, attached to the final door in the second level
+		//If the player reaches the final door, it will load EndScene
+		if (other.gameObject.name == "Player") 
+		{
 			Application.LoadLevel ("EndScene");
 		}
 

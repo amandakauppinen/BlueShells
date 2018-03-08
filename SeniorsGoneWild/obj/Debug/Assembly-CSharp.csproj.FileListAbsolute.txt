@@ -64,3 +64,5 @@ C:\Users\Am\Documents\BlueShells\BlueShells\SeniorsGoneWild\obj\Debug\Assembly-C
 C:\Users\Am\Documents\BlueShells\BlueShells\SeniorsGoneWild\obj\Debug\Assembly-CSharp.pdb
 C:\Users\Jay\Documents\BlueShells\BlueShells\SeniorsGoneWild\Temp\bin\Debug\Mono.Data.Sqlite.dll
 C:\Users\Jay\Documents\BlueShells\BlueShells\SeniorsGoneWild\Temp\bin\Debug\System.Data.dll
+C:\Users\Am\Documents\BlueShells\BlueShells\SeniorsGoneWild\Temp\bin\Debug\Mono.Data.Sqlite.dll
+C:\Users\Am\Documents\BlueShells\BlueShells\SeniorsGoneWild\Temp\bin\Debug\System.Data.dll
