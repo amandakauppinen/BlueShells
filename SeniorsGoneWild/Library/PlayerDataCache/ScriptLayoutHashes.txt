@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/Am/Desktop/SeniorsGoneWild.exe
+C:/Users/Jay/Videos/TestBuild.exe
 dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 9f07aaefd0255462bb6e4f9e5da6b2d4 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -106,6 +106,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 3f32f08a64daf40b09ed864d96fe3840 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransform
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
+20c5b8f1fc21aaa0bbb1fb1a635fe31b Assembly-CSharp.dll:.ExitGame
 422f0169ba3cb550b5c400f563e10c3f Assembly-CSharp.dll:.DialogueHolder
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInput
@@ -139,6 +140,7 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.SpatialMappingRenderer
 57836d8a96b7d1efe165d19972cb57af Assembly-CSharp.dll:.PlayerStartPoint
+6645a88290b9abfa21026ffcfaeff9d9 Assembly-CSharp.dll:.HighScoreManager
+74b32fc626f1154297b5adce25bc8cce Assembly-CSharp.dll:.HighScoreScript
 776615fa38a8e0b2e32afb78a6079147 Assembly-CSharp.dll:.DialogueManager
 74bdfe3150293437bfa63a797afb4793 Assembly-CSharp.dll:.CameraController
-20c5b8f1fc21aaa0bbb1fb1a635fe31b Assembly-CSharp.dll:.ExitGame

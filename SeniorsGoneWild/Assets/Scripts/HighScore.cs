@@ -21,7 +21,7 @@ public class HighScore : IComparable<HighScore>
 	}
 	public int CompareTo(HighScore other)
 	{
-		//firsr > second return -1
+		//first > second return -1
 		//first < second return 1
 		//first == second returrn 0
 
