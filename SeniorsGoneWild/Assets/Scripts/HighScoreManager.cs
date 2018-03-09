@@ -16,9 +16,7 @@ public class HighScoreManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		connectionString = "URI=file:" + Application.dataPath + "/HighScoreDB.sqlite";
-		InsertScore ("Kenneth", 10);
-
+		connectionString = "URI=file:" + Application.dataPath + "/HighScoreDB.db";
 		//GetScores ();
 		ShowScores();
 	}
@@ -90,7 +88,6 @@ public class HighScoreManager : MonoBehaviour {
 				dbCmd.ExecuteScalar();
 				dbConnection.Close ();
 
-
 			}
 		}
 	}
@@ -107,10 +104,8 @@ public class HighScoreManager : MonoBehaviour {
 			//changes scoreboard information. Puts # Before the rank number. 
 			//i +1 means 0+1, so it's gonna start ranks from 1 instead of 0 and it will keep increasing it by 1.
 
-
 			tmpObject.transform.SetParent(scoreParent);
-
-			tmpObject.GetComponent<RectTransform> ().localScale = new Vector3 (1, 1, 1);
+			//tmpObject.GetComponent<RectTransform> ().localScale = new Vector3 (1, 1, 1);
 		
 		}
 	}
