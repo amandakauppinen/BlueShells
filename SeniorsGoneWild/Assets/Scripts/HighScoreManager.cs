@@ -17,6 +17,7 @@ public class HighScoreManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		connectionString = "URI=file:" + Application.dataPath + "/HighScoreDB.db";
+		InsertScore ("Kenneth", 10);
 		//GetScores ();
 		ShowScores();
 	}
