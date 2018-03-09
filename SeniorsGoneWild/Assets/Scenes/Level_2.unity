@@ -2801,7 +2801,7 @@ GameObject:
   - component: {fileID: 225585226}
   - component: {fileID: 225585225}
   m_Layer: 0
-  m_Name: ExitGame
+  m_Name: RoomEntry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2815,10 +2815,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 225585224}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2af42f84fb0dc2c4d9e5d82f1ebd5813, type: 3}
+  m_Script: {fileID: 11500000, guid: de12a4eae38344bfd80c8ab15ab06fd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoad: 
+  levelToLoad: Level_3
 --- !u!61 &225585226
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2851,7 +2851,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 225585224}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.34, y: -33.7, z: -10}
+  m_LocalPosition: {x: 17.61, y: -33.56, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5282,10 +5282,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb359f49cfcda4f699046fe58f7fd4b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
-  timeBetweenMove: 0
-  timeToMove: 0
-  waitToBeload: 0
+  moveSpeed: 5
+  timeBetweenMove: 4
+  timeToMove: 1
+  waitToBeload: 2
 --- !u!50 &405216735
 Rigidbody2D:
   serializedVersion: 4
@@ -5305,7 +5305,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &410093250
 GameObject:
   m_ObjectHideFlags: 0
@@ -11902,10 +11902,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb359f49cfcda4f699046fe58f7fd4b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
-  timeBetweenMove: 0
-  timeToMove: 0
-  waitToBeload: 0
+  moveSpeed: 5
+  timeBetweenMove: 4
+  timeToMove: 1
+  waitToBeload: 2
 --- !u!50 &1019704639
 Rigidbody2D:
   serializedVersion: 4
@@ -11925,7 +11925,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1019704640
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20149,10 +20149,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb359f49cfcda4f699046fe58f7fd4b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
-  timeBetweenMove: 0
-  timeToMove: 0
-  waitToBeload: 0
+  moveSpeed: 5
+  timeBetweenMove: 4
+  timeToMove: 1
+  waitToBeload: 2
 --- !u!50 &1835452411
 Rigidbody2D:
   serializedVersion: 4
@@ -20172,7 +20172,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1835452412
 BoxCollider2D:
   m_ObjectHideFlags: 0
