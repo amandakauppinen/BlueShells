@@ -105,7 +105,7 @@ public class PlayerController : MonoBehaviour {
 	{
 		//Display a text that shows the amount of items collected
 		//If the item amount is equal to 4 or greater, display "win and escape" text
-		countText.text = "Item Count: " + count.ToString ();
+		//countText.text = "Item Count: " + count.ToString ();
 		if (count >= 4)
 			winText.text = "You've collected all your items! Now hurry and escape!";
 	}
