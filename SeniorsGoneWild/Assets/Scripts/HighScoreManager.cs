@@ -13,6 +13,8 @@ public class HighScoreManager : MonoBehaviour {
 
 	public Transform scoreParent;
 
+	public int topRanks;
+
 
 	// Use this for initialization
 	void Start () {
@@ -43,6 +45,8 @@ public class HighScoreManager : MonoBehaviour {
 
 			}
 		}
+
+		highScores.Sort ();
 	}
 
 	private void GetScores()
@@ -96,8 +100,12 @@ public class HighScoreManager : MonoBehaviour {
 	private void ShowScores() 
 	{
 		GetScores ();
-		for (int i = 0; i < highScores.Count; i++)
+		for (int i = 0; i < topRanks; i++)
 		{
+			if (i <= highScores.Count -1)
+			{
+				
+			
 			GameObject tmpObject = Instantiate(scorePrefab);
 			HighScore tmpScore = highScores[i];
 
@@ -107,7 +115,7 @@ public class HighScoreManager : MonoBehaviour {
 
 			tmpObject.transform.SetParent(scoreParent);
 			//tmpObject.GetComponent<RectTransform> ().localScale = new Vector3 (1, 1, 1);
-		
+			}
 		}
 	}
 }
