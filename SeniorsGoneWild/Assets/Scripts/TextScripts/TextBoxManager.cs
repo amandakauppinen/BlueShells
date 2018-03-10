@@ -76,18 +76,30 @@ public class TextBoxManager : MonoBehaviour {
 	public void EnableTextBox()
 	{
 		textBox.SetActive (true);
+		isActive = true;
 
 		if (stopPlayerMovement) {
 
 			player.canMove = false;
-		
+
 		}
 	}
 
-	public void DisableTextBox()
-	{
+	public void DisableTextBox(){
+		
 		textBox.SetActive (false);
+		isActive = false;
 
 		player.canMove = true;
+	}
+
+	public void RelodScript(TextAsset theText)
+	{
+
+		if (theText != null) {
+			textLines = new string[1];
+			textLines = (theText.text.Split ('\n'));
+		}
+
 	}
 }
