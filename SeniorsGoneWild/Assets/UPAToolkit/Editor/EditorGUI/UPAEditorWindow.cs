@@ -113,7 +113,7 @@ public class UPAEditorWindow : EditorWindow {
 		if (e.button == 0) {
 			
 			// Mouse buttons
-			if (e.isMouse && mousePos.y > 40 && e.type != EventType.mouseUp) {
+			if (e.isMouse && mousePos.y > 40 && e.type != EventType.MouseUp) {
 				if (!UPADrawer.GetLayerPanelRect (window.position).Contains (mousePos)) {
 					
 					if (tool == UPATool.Eraser)
@@ -135,7 +135,7 @@ public class UPAEditorWindow : EditorWindow {
 			}
 			
 			// Key down
-			if (e.type == EventType.keyDown) {
+			if (e.type == EventType.KeyDown) {
 				if (e.keyCode == KeyCode.W) {
 					gridOffsetY += 20f;
 				}
@@ -175,7 +175,7 @@ public class UPAEditorWindow : EditorWindow {
 					lastTool = tool;
 					tool = UPATool.Eraser;
 				}
-			} else if (e.type == EventType.keyUp && e.keyCode == KeyCode.LeftControl) {
+			} else if (e.type == EventType.KeyUp && e.keyCode == KeyCode.LeftControl) {
 				if (lastTool != UPATool.Empty) {
 					tool = lastTool;
 					lastTool = UPATool.Empty;
@@ -185,7 +185,7 @@ public class UPAEditorWindow : EditorWindow {
 		
 		// TODO: Better way of doing this?
 		// Why does it behave so weirdly with my mac tablet.
-		if (e.type == EventType.scrollWheel) {
+		if (e.type == EventType.ScrollWheel) {
 			gridSpacing -= e.delta.y;
 		}
 		#endregion

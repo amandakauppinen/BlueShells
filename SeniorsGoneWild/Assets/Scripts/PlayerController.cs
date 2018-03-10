@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour {
 	public Text countText;
 	public Text winText;
 
+	public bool canMove;
+
 	void Start () 
 	{
 		//Count is set to zero and will display nothing until first item is collected
@@ -51,6 +53,13 @@ public class PlayerController : MonoBehaviour {
 		
 	void Update () 
 	{
+
+	if (!canMove)
+	{
+		return;
+	}
+
+
 		//By default, Player is static until given input
 		playerMoving = false;
 
