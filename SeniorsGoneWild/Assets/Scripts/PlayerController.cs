@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour {
 		//Count is set to zero and will display nothing until first item is collected
 		count = 0;
 		winText.text = "";
-		SetCountText ();
+		//SetCountText ();
 
 		//retrieves animator and rigidbody for Player
 		anim = GetComponent<Animator> ();
@@ -106,16 +106,16 @@ public class PlayerController : MonoBehaviour {
 		{
 			other.gameObject.SetActive(false);
 			count = count + 1;
-			SetCountText ();
+			//SetCountText ();
 		}
 	}
 
-	void SetCountText()
+	/*void SetCountText()
 	{
 		//Display a text that shows the amount of items collected
 		//If the item amount is equal to 4 or greater, display "win and escape" text
 		//countText.text = "Item Count: " + count.ToString ();
 		if (count >= 4)
 			winText.text = "You've collected all your items! Now hurry and escape!";
-	}
+	}*/
 }

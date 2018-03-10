@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// Title screen script
-/// </summary>
 public class MenuScript : MonoBehaviour
 {
 	public void StartGame()

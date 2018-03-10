@@ -28,8 +28,6 @@ public class HighScoreManager : MonoBehaviour {
 		connectionString = "URI=file:" + Application.dataPath + "/HighScoreDB.db";
 
 		CreateTable ();
-
-		InsertScore ("Kenneth", 350);
 		//GetScores ();
 		DeleteExtraScore();
 		ShowScores();
@@ -66,7 +64,8 @@ public class HighScoreManager : MonoBehaviour {
 		if (enterName.text != string.Empty)
 			//this will check if the player entered a name or not
 		{
-			int score = UnityEngine.Random.Range(1,500);
+			//int score = UnityEngine.Random.Range(1,500);
+			int score = NurseController.scoreCount;
 			InsertScore(enterName.text, score);
 			enterName.text = string.Empty;
 

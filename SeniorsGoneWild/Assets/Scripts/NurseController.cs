@@ -34,6 +34,9 @@ public class NurseController : MonoBehaviour {
 	//Includes the Player object
 	private GameObject thePlayer;
 
+	//Used to add points to the score
+	public static int scoreCount = 500;
+
 	void Start () 
 	{
 		//Gives a rigid body to the nurse
@@ -88,11 +91,13 @@ public class NurseController : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D other)
 	{
 		//If the player is caught, he will become inactive and reload
+		//he will also have points added for every nurse contact
 		if (other.gameObject.name == "Player")
 		{
 			other.gameObject.SetActive(false);
 			reloading = true;
 			thePlayer = other.gameObject;
+			scoreCount = scoreCount - 10;
 		}
 	}
 }
