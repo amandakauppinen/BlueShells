@@ -98,6 +98,8 @@ public class NurseController : MonoBehaviour {
 			reloading = true;
 			thePlayer = other.gameObject;
 			scoreCount = scoreCount - 10;
+
+			FindObjectOfType<AudioManager> ().Play ("Busted"); /*this is needed for playing the sound when you hit an enemy*/
 		}
 	}
 }

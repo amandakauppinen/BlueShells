@@ -9,6 +9,7 @@ public class HighScoreScript : MonoBehaviour {
 	public GameObject scoreName;
 	public GameObject rank;
 
+	/*this will modify the text component and add text in it*/
 	public void SetScore(string name, string score, string rank)
 	{
 		this.score.GetComponent<Text>().text = score;

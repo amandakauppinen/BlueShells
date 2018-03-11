@@ -107,6 +107,8 @@ public class PlayerController : MonoBehaviour {
 			other.gameObject.SetActive(false);
 			count = count + 1;
 			//SetCountText ();
+
+			FindObjectOfType<AudioManager> ().Play ("Item"); /*This will play a sound when you collect an item*/
 		}
 	}
 
