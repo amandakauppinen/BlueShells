@@ -3,7 +3,7 @@
 
 ## Objective
 <br>
-This is a single player game. Your object is to escape from the nursing home. <br>
+This is a single player game. Your objective is to escape from the nursing home. <br>
 Don't forget to collect all the items<br>
 <br>
 
@@ -22,8 +22,8 @@ Don't forget to collect all the items<br>
 
 ## Other Information
 <br>
-This game is our school project for learing the basics of game development. It is made using Unity and coded with C#.
-If you want to download our game and perhaps develop it even further, you will need Unity and some C# program (We used MonoDevelop) to be able to modify the files. We implemented a database for storing highscores. You will also need a database manager to be able to access and view that information (We used DB Browser for SQLlite).
+This game is our school project for learning the basics of game development. It is made using Unity and coded with C#.
+If you want to download our game and perhaps develop it even further, you will need Unity and some C# program (We used MonoDevelop) to be able to modify the files. We implemented a database for storing highscores. You will also need a database manager to be able to access and view that information (We used DB Browser for SQLite).
 <br>
 
 ## Contributors
