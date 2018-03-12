@@ -23,6 +23,7 @@ Don't forget to collect all the items<br>
 ## Other Information
 <br>
 This game is our school project for learing the basics of game development. It is made using Unity and coded with C#.
+If you want to download our game and perhaps develop it even further, you will need Unity and some C# program (We used MonoDevelop) to be able to modify the files. We implemented a database for storing highscores. You will also need a database manager to be able to access and view that information (We used DB Browser for SQLlite).
 <br>
 
 ## Contributors
