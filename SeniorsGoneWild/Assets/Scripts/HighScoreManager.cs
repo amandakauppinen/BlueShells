@@ -36,7 +36,7 @@ public class HighScoreManager : MonoBehaviour {
 
 		CreateTable ();
 		DeleteExtraScore();
-		ShowScores();
+		//ShowScores();
 	}
 
 	/// <summary>

@@ -16,11 +16,15 @@ public class LoadNewArea : MonoBehaviour {
 		
 	}
 
+	/// <summary>
+	/// This is the trigger for the door in between Levels 1 and 2
+	/// It requires the object passing through to be the player and 
+	/// the player must have collected all 4 items to move onto the
+	/// next scene by making the trigger active
+	/// </summary>
+	/// <param name="other">Other.</param>
 	void OnTriggerEnter2D (Collider2D other)
 	{
-		//This is the trigger for the final door in the first level
-		//If the player has collected the required amount of items, the trigger will become active
-		//Afer the trigger is active, the player can move on to the next level
 		if (other.gameObject.name == "Player" && PlayerController.itemCount == 4) 
 		{
 			Application.LoadLevel (levelToLoad);
