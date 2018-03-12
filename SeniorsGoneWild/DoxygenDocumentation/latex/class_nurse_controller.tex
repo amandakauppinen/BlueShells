@@ -1,0 +1,189 @@
+\hypertarget{class_nurse_controller}{}\section{Nurse\+Controller Class Reference}
+\label{class_nurse_controller}\index{Nurse\+Controller@{Nurse\+Controller}}
+Inheritance diagram for Nurse\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_nurse_controller}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_nurse_controller_ac322ce98930aa447581ed2f996afa236}{move\+Speed}}
+\begin{DoxyCompactList}\small\item\em Declares a moving speed for the nurse \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_nurse_controller_a2c526e24198abadb85a44b92c46a2fed}{time\+Between\+Move}}
+\begin{DoxyCompactList}\small\item\em Because the nurse movement is random, the code needs a counter in between the randomized moves before the nurse will be set to move again \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_nurse_controller_a8d3c0f3a1e8e1b2082e98926c1e6ede6}{time\+To\+Move}}
+\begin{DoxyCompactList}\small\item\em These set how long the nurse will be moving \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_nurse_controller_a75b6d8fbe22de1d605aff154528d9827}{wait\+To\+Beload}}
+\begin{DoxyCompactList}\small\item\em This is for the character interation when caught by a nurse The character will reload, and there is a timer for that \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_nurse_controller_a02f9b6bcfd4d5082def13b1e69921b76}{score\+Count}} = 500
+\begin{DoxyCompactList}\small\item\em This is used to set a baseline for the scoring system \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_nurse_controller_aa8fcc891957bbead5cfaa915045e3ded}{Start}} ()
+\begin{DoxyCompactList}\small\item\em This function gives a rigid body to nurse It also sets a random time in between nurse movements \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_nurse_controller_a3c52dfb2cfa34450a3b0c379cbff1202}{Update}} ()
+\begin{DoxyCompactList}\small\item\em If the time\+To\+Move\+Counter goes below zero, the nurse will stop moving for a random amount of time If the player is caught (wait\+To\+Beload $<$0), player will be reset to the beginning of the level and become active again \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_nurse_controller_a80a67354fb792c665c686f8b3ef4ba8d}{On\+Collision\+Enter2D}} (Collision2D other)
+\begin{DoxyCompactList}\small\item\em If the player is caught by a nurse, he will become inactive and relaod. He will also have points added for every nurse contact. It also includes the sound that will be played on nurse contact. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Rigidbody2D \mbox{\hyperlink{class_nurse_controller_aa101cdff336129084914ac7b99c48dde}{my\+Rigid\+Body}}
+\begin{DoxyCompactList}\small\item\em Declares a rigid body for the nurse \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_nurse_controller_a51594c8ff5d4c71eeec6aef9fff4819c}{moving}}
+\begin{DoxyCompactList}\small\item\em The nurse is either moving or is not \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_nurse_controller_a9bfdcd467ebbc3af37fe73001a4849c9}\label{class_nurse_controller_a9bfdcd467ebbc3af37fe73001a4849c9}} 
+float {\bfseries time\+Between\+Move\+Counter}
+\item 
+\mbox{\Hypertarget{class_nurse_controller_a2c76f2ef1ad2679c9696608306ad533f}\label{class_nurse_controller_a2c76f2ef1ad2679c9696608306ad533f}} 
+float {\bfseries time\+To\+Move\+Counter}
+\item 
+Vector3 \mbox{\hyperlink{class_nurse_controller_af1bbb9415d5e5fc25461cff6f72722f3}{move\+Direction}}
+\begin{DoxyCompactList}\small\item\em Sets a moving direction for the nurse \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_nurse_controller_a7542b5de536e73a0aee7cb8a499ea055}\label{class_nurse_controller_a7542b5de536e73a0aee7cb8a499ea055}} 
+bool {\bfseries reloading}
+\item 
+Game\+Object \mbox{\hyperlink{class_nurse_controller_a7977ec16f13d4a3b5b898ee479140a58}{the\+Player}}
+\begin{DoxyCompactList}\small\item\em Includes the Player object \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_nurse_controller_a80a67354fb792c665c686f8b3ef4ba8d}\label{class_nurse_controller_a80a67354fb792c665c686f8b3ef4ba8d}} 
+\index{Nurse\+Controller@{Nurse\+Controller}!On\+Collision\+Enter2D@{On\+Collision\+Enter2D}}
+\index{On\+Collision\+Enter2D@{On\+Collision\+Enter2D}!Nurse\+Controller@{Nurse\+Controller}}
+\subsubsection{\texorpdfstring{On\+Collision\+Enter2\+D()}{OnCollisionEnter2D()}}
+{\footnotesize\ttfamily void Nurse\+Controller.\+On\+Collision\+Enter2D (\begin{DoxyParamCaption}\item[{Collision2D}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+If the player is caught by a nurse, he will become inactive and relaod. He will also have points added for every nurse contact. It also includes the sound that will be played on nurse contact. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Other.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_nurse_controller_aa8fcc891957bbead5cfaa915045e3ded}\label{class_nurse_controller_aa8fcc891957bbead5cfaa915045e3ded}} 
+\index{Nurse\+Controller@{Nurse\+Controller}!Start@{Start}}
+\index{Start@{Start}!Nurse\+Controller@{Nurse\+Controller}}
+\subsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Nurse\+Controller.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This function gives a rigid body to nurse It also sets a random time in between nurse movements 
+
+\mbox{\Hypertarget{class_nurse_controller_a3c52dfb2cfa34450a3b0c379cbff1202}\label{class_nurse_controller_a3c52dfb2cfa34450a3b0c379cbff1202}} 
+\index{Nurse\+Controller@{Nurse\+Controller}!Update@{Update}}
+\index{Update@{Update}!Nurse\+Controller@{Nurse\+Controller}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Nurse\+Controller.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+If the time\+To\+Move\+Counter goes below zero, the nurse will stop moving for a random amount of time If the player is caught (wait\+To\+Beload $<$0), player will be reset to the beginning of the level and become active again 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_nurse_controller_af1bbb9415d5e5fc25461cff6f72722f3}\label{class_nurse_controller_af1bbb9415d5e5fc25461cff6f72722f3}} 
+\index{Nurse\+Controller@{Nurse\+Controller}!move\+Direction@{move\+Direction}}
+\index{move\+Direction@{move\+Direction}!Nurse\+Controller@{Nurse\+Controller}}
+\subsubsection{\texorpdfstring{move\+Direction}{moveDirection}}
+{\footnotesize\ttfamily Vector3 Nurse\+Controller.\+move\+Direction\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sets a moving direction for the nurse 
+
+\mbox{\Hypertarget{class_nurse_controller_ac322ce98930aa447581ed2f996afa236}\label{class_nurse_controller_ac322ce98930aa447581ed2f996afa236}} 
+\index{Nurse\+Controller@{Nurse\+Controller}!move\+Speed@{move\+Speed}}
+\index{move\+Speed@{move\+Speed}!Nurse\+Controller@{Nurse\+Controller}}
+\subsubsection{\texorpdfstring{move\+Speed}{moveSpeed}}
+{\footnotesize\ttfamily float Nurse\+Controller.\+move\+Speed}
+
+
+
+Declares a moving speed for the nurse 
+
+\mbox{\Hypertarget{class_nurse_controller_a51594c8ff5d4c71eeec6aef9fff4819c}\label{class_nurse_controller_a51594c8ff5d4c71eeec6aef9fff4819c}} 
+\index{Nurse\+Controller@{Nurse\+Controller}!moving@{moving}}
+\index{moving@{moving}!Nurse\+Controller@{Nurse\+Controller}}
+\subsubsection{\texorpdfstring{moving}{moving}}
+{\footnotesize\ttfamily bool Nurse\+Controller.\+moving\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The nurse is either moving or is not 
+
+\mbox{\Hypertarget{class_nurse_controller_aa101cdff336129084914ac7b99c48dde}\label{class_nurse_controller_aa101cdff336129084914ac7b99c48dde}} 
+\index{Nurse\+Controller@{Nurse\+Controller}!my\+Rigid\+Body@{my\+Rigid\+Body}}
+\index{my\+Rigid\+Body@{my\+Rigid\+Body}!Nurse\+Controller@{Nurse\+Controller}}
+\subsubsection{\texorpdfstring{my\+Rigid\+Body}{myRigidBody}}
+{\footnotesize\ttfamily Rigidbody2D Nurse\+Controller.\+my\+Rigid\+Body\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Declares a rigid body for the nurse 
+
+\mbox{\Hypertarget{class_nurse_controller_a02f9b6bcfd4d5082def13b1e69921b76}\label{class_nurse_controller_a02f9b6bcfd4d5082def13b1e69921b76}} 
+\index{Nurse\+Controller@{Nurse\+Controller}!score\+Count@{score\+Count}}
+\index{score\+Count@{score\+Count}!Nurse\+Controller@{Nurse\+Controller}}
+\subsubsection{\texorpdfstring{score\+Count}{scoreCount}}
+{\footnotesize\ttfamily int Nurse\+Controller.\+score\+Count = 500\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This is used to set a baseline for the scoring system 
+
+\mbox{\Hypertarget{class_nurse_controller_a7977ec16f13d4a3b5b898ee479140a58}\label{class_nurse_controller_a7977ec16f13d4a3b5b898ee479140a58}} 
+\index{Nurse\+Controller@{Nurse\+Controller}!the\+Player@{the\+Player}}
+\index{the\+Player@{the\+Player}!Nurse\+Controller@{Nurse\+Controller}}
+\subsubsection{\texorpdfstring{the\+Player}{thePlayer}}
+{\footnotesize\ttfamily Game\+Object Nurse\+Controller.\+the\+Player\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Includes the Player object 
+
+\mbox{\Hypertarget{class_nurse_controller_a2c526e24198abadb85a44b92c46a2fed}\label{class_nurse_controller_a2c526e24198abadb85a44b92c46a2fed}} 
+\index{Nurse\+Controller@{Nurse\+Controller}!time\+Between\+Move@{time\+Between\+Move}}
+\index{time\+Between\+Move@{time\+Between\+Move}!Nurse\+Controller@{Nurse\+Controller}}
+\subsubsection{\texorpdfstring{time\+Between\+Move}{timeBetweenMove}}
+{\footnotesize\ttfamily float Nurse\+Controller.\+time\+Between\+Move}
+
+
+
+Because the nurse movement is random, the code needs a counter in between the randomized moves before the nurse will be set to move again 
+
+\mbox{\Hypertarget{class_nurse_controller_a8d3c0f3a1e8e1b2082e98926c1e6ede6}\label{class_nurse_controller_a8d3c0f3a1e8e1b2082e98926c1e6ede6}} 
+\index{Nurse\+Controller@{Nurse\+Controller}!time\+To\+Move@{time\+To\+Move}}
+\index{time\+To\+Move@{time\+To\+Move}!Nurse\+Controller@{Nurse\+Controller}}
+\subsubsection{\texorpdfstring{time\+To\+Move}{timeToMove}}
+{\footnotesize\ttfamily float Nurse\+Controller.\+time\+To\+Move}
+
+
+
+These set how long the nurse will be moving 
+
+\mbox{\Hypertarget{class_nurse_controller_a75b6d8fbe22de1d605aff154528d9827}\label{class_nurse_controller_a75b6d8fbe22de1d605aff154528d9827}} 
+\index{Nurse\+Controller@{Nurse\+Controller}!wait\+To\+Beload@{wait\+To\+Beload}}
+\index{wait\+To\+Beload@{wait\+To\+Beload}!Nurse\+Controller@{Nurse\+Controller}}
+\subsubsection{\texorpdfstring{wait\+To\+Beload}{waitToBeload}}
+{\footnotesize\ttfamily float Nurse\+Controller.\+wait\+To\+Beload}
+
+
+
+This is for the character interation when caught by a nurse The character will reload, and there is a timer for that 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Am/\+Documents/\+Blue\+Shells -\/ Copy/\+Blue\+Shells/\+Seniors\+Gone\+Wild/\+Assets/\+Scripts/Nurse\+Controller.\+cs\end{DoxyCompactItemize}

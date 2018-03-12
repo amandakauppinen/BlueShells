@@ -1,0 +1,184 @@
+\hypertarget{class_high_score_manager}{}\section{High\+Score\+Manager Class Reference}
+\label{class_high_score_manager}\index{High\+Score\+Manager@{High\+Score\+Manager}}
+Inheritance diagram for High\+Score\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_high_score_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_high_score_manager_a098d1e52bc63ab8c014fa1210d04481e}{Enter\+Name}} ()
+\begin{DoxyCompactList}\small\item\em This function checks if the player has entered a name or not It sets the player\textquotesingle{}s score, taken from the \mbox{\hyperlink{class_nurse_controller}{Nurse\+Controller}} It will then enter the name, and show the previous scores \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_high_score_manager_ac7fb552c1ee9bf4415e74adfa005a103}\label{class_high_score_manager_ac7fb552c1ee9bf4415e74adfa005a103}} 
+Game\+Object {\bfseries score\+Prefab}
+\item 
+\mbox{\Hypertarget{class_high_score_manager_ae76705d7b8e7717f09dcb7b6950cd327}\label{class_high_score_manager_ae76705d7b8e7717f09dcb7b6950cd327}} 
+Game\+Object {\bfseries name\+Dialog}
+\item 
+\mbox{\Hypertarget{class_high_score_manager_a8fc762843b986cf1bf477f78e4685761}\label{class_high_score_manager_a8fc762843b986cf1bf477f78e4685761}} 
+Transform {\bfseries score\+Parent}
+\item 
+\mbox{\Hypertarget{class_high_score_manager_a331c0091b70ade22473e2ea320cb2ce7}\label{class_high_score_manager_a331c0091b70ade22473e2ea320cb2ce7}} 
+int {\bfseries top\+Ranks}
+\item 
+\mbox{\Hypertarget{class_high_score_manager_a22c1d47f968a21f33e253b94657ae773}\label{class_high_score_manager_a22c1d47f968a21f33e253b94657ae773}} 
+int {\bfseries save\+Scores}
+\item 
+\mbox{\Hypertarget{class_high_score_manager_ae186979c1ae3245b63d05fd2f315788d}\label{class_high_score_manager_ae186979c1ae3245b63d05fd2f315788d}} 
+Input\+Field {\bfseries enter\+Name}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_high_score_manager_acee896a71e1b9f5bb9c486d373331df0}{Start}} ()
+\begin{DoxyCompactList}\small\item\em The start contains all of the functions we will use to update the high score list This sets a path that goes directly to the database created for the game \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_high_score_manager_ad75f6456ad76309b4744a3c592da7443}{Update}} ()
+\begin{DoxyCompactList}\small\item\em This is used for the \char`\"{}\+Insert Name\char`\"{} box It is activated upon using the escape key \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_high_score_manager_a4a5a8e7cf5168aba0841c78432294a4a}{Create\+Table}} ()
+\begin{DoxyCompactList}\small\item\em This function creates the database table inside the C\# and unity files \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_high_score_manager_a45ea58b135c4050aedaad4e12ffadbe3}{Insert\+Score}} (string name, int new\+Score)
+\begin{DoxyCompactList}\small\item\em This function compares the scores and adjusts the rankings. Our scoreboard shows the top 10, so it removes the lowest score instead of the highest It opens and closes the connection to the database via S\+QL queries \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_high_score_manager_ac0ebc45a4af433ca6f19c06096bd072f}{Get\+Scores}} ()
+\begin{DoxyCompactList}\small\item\em This function retrieves the scores from the database and inserts them into the unity scoreboard and then sorts them in highest-\/lowest order \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_high_score_manager_a2051e83d70923629fdc6bd68c7e4eac9}{Delete\+Score}} (int id)
+\begin{DoxyCompactList}\small\item\em This function is called upon to delete a score when a newer, higher score is inserted into the database, thus taking it off the high score list \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_high_score_manager_ab3e52344cd580a8e4e68f741361072e4}{Show\+Scores}} ()
+\begin{DoxyCompactList}\small\item\em This function is used to destroy all of the scores, in order to reinsert them into the database to ensure that no repeats are made It changes the scoreboard information, and inserts a \char`\"{}\#\char`\"{} before the rank It also includes \char`\"{}i + 1\char`\"{} which starts the ranks from 1 instead of 0 It includes organizational elements such as the prefab and parent items which is where the scores are inserted \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_high_score_manager_a6b8807e7293dddf882b3faf180e68ecd}{Delete\+Extra\+Score}} ()
+\begin{DoxyCompactList}\small\item\em Deletes extra scores from the database based on our limit \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_high_score_manager_a9d8d74d89d2986ad69f282c1129d04a9}{connection\+String}}
+\begin{DoxyCompactList}\small\item\em All variables are elements used for the format of the high score appearance \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_high_score_manager_a9fa93771421f2616616eb71cd1e6ec2d}\label{class_high_score_manager_a9fa93771421f2616616eb71cd1e6ec2d}} 
+List$<$ \mbox{\hyperlink{class_high_score}{High\+Score}} $>$ {\bfseries high\+Scores} = new List$<$\mbox{\hyperlink{class_high_score}{High\+Score}}$>$ ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_high_score_manager_a4a5a8e7cf5168aba0841c78432294a4a}\label{class_high_score_manager_a4a5a8e7cf5168aba0841c78432294a4a}} 
+\index{High\+Score\+Manager@{High\+Score\+Manager}!Create\+Table@{Create\+Table}}
+\index{Create\+Table@{Create\+Table}!High\+Score\+Manager@{High\+Score\+Manager}}
+\subsubsection{\texorpdfstring{Create\+Table()}{CreateTable()}}
+{\footnotesize\ttfamily void High\+Score\+Manager.\+Create\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This function creates the database table inside the C\# and unity files 
+
+\mbox{\Hypertarget{class_high_score_manager_a6b8807e7293dddf882b3faf180e68ecd}\label{class_high_score_manager_a6b8807e7293dddf882b3faf180e68ecd}} 
+\index{High\+Score\+Manager@{High\+Score\+Manager}!Delete\+Extra\+Score@{Delete\+Extra\+Score}}
+\index{Delete\+Extra\+Score@{Delete\+Extra\+Score}!High\+Score\+Manager@{High\+Score\+Manager}}
+\subsubsection{\texorpdfstring{Delete\+Extra\+Score()}{DeleteExtraScore()}}
+{\footnotesize\ttfamily void High\+Score\+Manager.\+Delete\+Extra\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Deletes extra scores from the database based on our limit 
+
+\mbox{\Hypertarget{class_high_score_manager_a2051e83d70923629fdc6bd68c7e4eac9}\label{class_high_score_manager_a2051e83d70923629fdc6bd68c7e4eac9}} 
+\index{High\+Score\+Manager@{High\+Score\+Manager}!Delete\+Score@{Delete\+Score}}
+\index{Delete\+Score@{Delete\+Score}!High\+Score\+Manager@{High\+Score\+Manager}}
+\subsubsection{\texorpdfstring{Delete\+Score()}{DeleteScore()}}
+{\footnotesize\ttfamily void High\+Score\+Manager.\+Delete\+Score (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This function is called upon to delete a score when a newer, higher score is inserted into the database, thus taking it off the high score list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Identifier.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_high_score_manager_a098d1e52bc63ab8c014fa1210d04481e}\label{class_high_score_manager_a098d1e52bc63ab8c014fa1210d04481e}} 
+\index{High\+Score\+Manager@{High\+Score\+Manager}!Enter\+Name@{Enter\+Name}}
+\index{Enter\+Name@{Enter\+Name}!High\+Score\+Manager@{High\+Score\+Manager}}
+\subsubsection{\texorpdfstring{Enter\+Name()}{EnterName()}}
+{\footnotesize\ttfamily void High\+Score\+Manager.\+Enter\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function checks if the player has entered a name or not It sets the player\textquotesingle{}s score, taken from the \mbox{\hyperlink{class_nurse_controller}{Nurse\+Controller}} It will then enter the name, and show the previous scores 
+
+\mbox{\Hypertarget{class_high_score_manager_ac0ebc45a4af433ca6f19c06096bd072f}\label{class_high_score_manager_ac0ebc45a4af433ca6f19c06096bd072f}} 
+\index{High\+Score\+Manager@{High\+Score\+Manager}!Get\+Scores@{Get\+Scores}}
+\index{Get\+Scores@{Get\+Scores}!High\+Score\+Manager@{High\+Score\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Scores()}{GetScores()}}
+{\footnotesize\ttfamily void High\+Score\+Manager.\+Get\+Scores (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This function retrieves the scores from the database and inserts them into the unity scoreboard and then sorts them in highest-\/lowest order 
+
+\mbox{\Hypertarget{class_high_score_manager_a45ea58b135c4050aedaad4e12ffadbe3}\label{class_high_score_manager_a45ea58b135c4050aedaad4e12ffadbe3}} 
+\index{High\+Score\+Manager@{High\+Score\+Manager}!Insert\+Score@{Insert\+Score}}
+\index{Insert\+Score@{Insert\+Score}!High\+Score\+Manager@{High\+Score\+Manager}}
+\subsubsection{\texorpdfstring{Insert\+Score()}{InsertScore()}}
+{\footnotesize\ttfamily void High\+Score\+Manager.\+Insert\+Score (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{int}]{new\+Score }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This function compares the scores and adjusts the rankings. Our scoreboard shows the top 10, so it removes the lowest score instead of the highest It opens and closes the connection to the database via S\+QL queries 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name.\\
+\hline
+{\em new\+Score} & New score.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_high_score_manager_ab3e52344cd580a8e4e68f741361072e4}\label{class_high_score_manager_ab3e52344cd580a8e4e68f741361072e4}} 
+\index{High\+Score\+Manager@{High\+Score\+Manager}!Show\+Scores@{Show\+Scores}}
+\index{Show\+Scores@{Show\+Scores}!High\+Score\+Manager@{High\+Score\+Manager}}
+\subsubsection{\texorpdfstring{Show\+Scores()}{ShowScores()}}
+{\footnotesize\ttfamily void High\+Score\+Manager.\+Show\+Scores (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This function is used to destroy all of the scores, in order to reinsert them into the database to ensure that no repeats are made It changes the scoreboard information, and inserts a \char`\"{}\#\char`\"{} before the rank It also includes \char`\"{}i + 1\char`\"{} which starts the ranks from 1 instead of 0 It includes organizational elements such as the prefab and parent items which is where the scores are inserted 
+
+\mbox{\Hypertarget{class_high_score_manager_acee896a71e1b9f5bb9c486d373331df0}\label{class_high_score_manager_acee896a71e1b9f5bb9c486d373331df0}} 
+\index{High\+Score\+Manager@{High\+Score\+Manager}!Start@{Start}}
+\index{Start@{Start}!High\+Score\+Manager@{High\+Score\+Manager}}
+\subsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void High\+Score\+Manager.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The start contains all of the functions we will use to update the high score list This sets a path that goes directly to the database created for the game 
+
+\mbox{\Hypertarget{class_high_score_manager_ad75f6456ad76309b4744a3c592da7443}\label{class_high_score_manager_ad75f6456ad76309b4744a3c592da7443}} 
+\index{High\+Score\+Manager@{High\+Score\+Manager}!Update@{Update}}
+\index{Update@{Update}!High\+Score\+Manager@{High\+Score\+Manager}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void High\+Score\+Manager.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This is used for the \char`\"{}\+Insert Name\char`\"{} box It is activated upon using the escape key 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_high_score_manager_a9d8d74d89d2986ad69f282c1129d04a9}\label{class_high_score_manager_a9d8d74d89d2986ad69f282c1129d04a9}} 
+\index{High\+Score\+Manager@{High\+Score\+Manager}!connection\+String@{connection\+String}}
+\index{connection\+String@{connection\+String}!High\+Score\+Manager@{High\+Score\+Manager}}
+\subsubsection{\texorpdfstring{connection\+String}{connectionString}}
+{\footnotesize\ttfamily string High\+Score\+Manager.\+connection\+String\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+All variables are elements used for the format of the high score appearance 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Am/\+Documents/\+Blue\+Shells -\/ Copy/\+Blue\+Shells/\+Seniors\+Gone\+Wild/\+Assets/\+Scripts/High\+Score\+Manager.\+cs\end{DoxyCompactItemize}

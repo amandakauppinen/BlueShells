@@ -1,0 +1,85 @@
+\hypertarget{class_camera_controller}{}\section{Camera\+Controller Class Reference}
+\label{class_camera_controller}\index{Camera\+Controller@{Camera\+Controller}}
+Inheritance diagram for Camera\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_camera_controller}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \mbox{\hyperlink{class_camera_controller_a1bfdfa348a7f9bb2c8d511d9ee3435b9}{follow\+Target}}
+\begin{DoxyCompactList}\small\item\em Camera will follow player, create a target position and correlate with a move speed \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_camera_controller_a8979cceb75638fe3caf62c8516ec4bc6}\label{class_camera_controller_a8979cceb75638fe3caf62c8516ec4bc6}} 
+float {\bfseries move\+Speed}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_camera_controller_ad4a238c6f7db3ee003302a245d860860}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Game will not destroy the camera on start If no camera exists, a camera will be made If camera exists, it will be destroyed and a new one will be made \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_controller_a7c4f486f4bcbd1d54a346fdce9707bd5}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Camera will follow target position in the x and y directions The move speed of the camera will be smoothed by deltatime \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_camera_controller_a2184f9f0312b1966a136d765abcf1a59}\label{class_camera_controller_a2184f9f0312b1966a136d765abcf1a59}} 
+Vector3 {\bfseries target\+Pos}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_camera_controller_a2569b5df8af02ceb1c47be482616b638}{camera\+Exists}}
+\begin{DoxyCompactList}\small\item\em Camera either exists or it does not \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_camera_controller_ad4a238c6f7db3ee003302a245d860860}\label{class_camera_controller_ad4a238c6f7db3ee003302a245d860860}} 
+\index{Camera\+Controller@{Camera\+Controller}!Start@{Start}}
+\index{Start@{Start}!Camera\+Controller@{Camera\+Controller}}
+\subsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Camera\+Controller.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Game will not destroy the camera on start If no camera exists, a camera will be made If camera exists, it will be destroyed and a new one will be made 
+
+\mbox{\Hypertarget{class_camera_controller_a7c4f486f4bcbd1d54a346fdce9707bd5}\label{class_camera_controller_a7c4f486f4bcbd1d54a346fdce9707bd5}} 
+\index{Camera\+Controller@{Camera\+Controller}!Update@{Update}}
+\index{Update@{Update}!Camera\+Controller@{Camera\+Controller}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Camera\+Controller.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Camera will follow target position in the x and y directions The move speed of the camera will be smoothed by deltatime 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_camera_controller_a2569b5df8af02ceb1c47be482616b638}\label{class_camera_controller_a2569b5df8af02ceb1c47be482616b638}} 
+\index{Camera\+Controller@{Camera\+Controller}!camera\+Exists@{camera\+Exists}}
+\index{camera\+Exists@{camera\+Exists}!Camera\+Controller@{Camera\+Controller}}
+\subsubsection{\texorpdfstring{camera\+Exists}{cameraExists}}
+{\footnotesize\ttfamily bool Camera\+Controller.\+camera\+Exists\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Camera either exists or it does not 
+
+\mbox{\Hypertarget{class_camera_controller_a1bfdfa348a7f9bb2c8d511d9ee3435b9}\label{class_camera_controller_a1bfdfa348a7f9bb2c8d511d9ee3435b9}} 
+\index{Camera\+Controller@{Camera\+Controller}!follow\+Target@{follow\+Target}}
+\index{follow\+Target@{follow\+Target}!Camera\+Controller@{Camera\+Controller}}
+\subsubsection{\texorpdfstring{follow\+Target}{followTarget}}
+{\footnotesize\ttfamily Game\+Object Camera\+Controller.\+follow\+Target}
+
+
+
+Camera will follow player, create a target position and correlate with a move speed 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Am/\+Documents/\+Blue\+Shells -\/ Copy/\+Blue\+Shells/\+Seniors\+Gone\+Wild/\+Assets/\+Scripts/Camera\+Controller.\+cs\end{DoxyCompactItemize}

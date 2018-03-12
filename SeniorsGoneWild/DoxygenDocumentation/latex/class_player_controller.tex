@@ -1,0 +1,171 @@
+\hypertarget{class_player_controller}{}\section{Player\+Controller Class Reference}
+\label{class_player_controller}\index{Player\+Controller@{Player\+Controller}}
+Inheritance diagram for Player\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player_controller}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_player_controller_abb12e85ca1b12efdbc8684bff2e19c4c}{move\+Speed}}
+\begin{DoxyCompactList}\small\item\em Creates move speed for player \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_player_controller_a8734946783cad257b722f45fe4af8c6c}\label{class_player_controller_a8734946783cad257b722f45fe4af8c6c}} 
+Vector2 {\bfseries last\+Move}
+\item 
+\mbox{\Hypertarget{class_player_controller_a61795bee5f0ca4705f688419919e3086}\label{class_player_controller_a61795bee5f0ca4705f688419919e3086}} 
+Text {\bfseries count\+Text}
+\item 
+\mbox{\Hypertarget{class_player_controller_a366f431ae274e7b19365f7b15b1709b8}\label{class_player_controller_a366f431ae274e7b19365f7b15b1709b8}} 
+Text {\bfseries win\+Text}
+\item 
+bool \mbox{\hyperlink{class_player_controller_a14bb057d727180f87728bd6fe62dffc9}{can\+Move}}
+\begin{DoxyCompactList}\small\item\em Variable for pausing movement during dialogue \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_player_controller_a0e233eee5112d304b1bb5a118d6087e7}{item\+Count}}
+\begin{DoxyCompactList}\small\item\em These variables are used to keep track of item collection \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_controller_ae1117d9c4da3193181cddad2c814e467}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Item count is set to zero when the game starts and will display no win text until later If the player doesn\textquotesingle{}t exist, it creates a player Otherwise, if there is a player, the player is destroyed and replaced This is used for movement to the next scene \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_controller_ae8bc83dffb99867a04be016473ed2c43}{Update}} ()
+\begin{DoxyCompactList}\small\item\em This function is used to pause the character\textquotesingle{}s movement while dialogue is open By default, the player is static until given input Based on the keys pressed, the player will either move horizontally or vertically and will retain the direction of it\textquotesingle{}s last move until a directional button is pushed again \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_controller_a751c7590dfb8e726d1eb3a27d0b197a2}{On\+Trigger\+Enter2D}} (Collider2D other)
+\begin{DoxyCompactList}\small\item\em If items are collected, 1 is added to the count A sound will be played upon item collection \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_controller_ad55b05bf5e6a5ae39a2a01700f1772ce}{Set\+Count\+Text}} ()
+\begin{DoxyCompactList}\small\item\em This function displays a text that shows the amount of iems collected If the item amount is equal to 4 or greater, display \char`\"{}win and escape\char`\"{} text \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Animator \mbox{\hyperlink{class_player_controller_ac646d94772588e3393eb5cb9ac02a5c4}{anim}}
+\begin{DoxyCompactList}\small\item\em Inlcudes the animations for the player and creates a rigidbody \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_player_controller_a87b5271776e29f73db019d63a639c234}\label{class_player_controller_a87b5271776e29f73db019d63a639c234}} 
+Rigidbody2D {\bfseries my\+Rigidbody}
+\item 
+bool \mbox{\hyperlink{class_player_controller_a15143b0b40abe525495279ea3cd4ba82}{player\+Moving}}
+\begin{DoxyCompactList}\small\item\em Player is either moving or is not \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_player_controller_aee578ffd54e0e8e2f8149e2d3d1ba036}{player\+Exists}}
+\begin{DoxyCompactList}\small\item\em Player either exists or does not \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_player_controller_a751c7590dfb8e726d1eb3a27d0b197a2}\label{class_player_controller_a751c7590dfb8e726d1eb3a27d0b197a2}} 
+\index{Player\+Controller@{Player\+Controller}!On\+Trigger\+Enter2D@{On\+Trigger\+Enter2D}}
+\index{On\+Trigger\+Enter2D@{On\+Trigger\+Enter2D}!Player\+Controller@{Player\+Controller}}
+\subsubsection{\texorpdfstring{On\+Trigger\+Enter2\+D()}{OnTriggerEnter2D()}}
+{\footnotesize\ttfamily void Player\+Controller.\+On\+Trigger\+Enter2D (\begin{DoxyParamCaption}\item[{Collider2D}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+If items are collected, 1 is added to the count A sound will be played upon item collection 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Other.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_player_controller_ad55b05bf5e6a5ae39a2a01700f1772ce}\label{class_player_controller_ad55b05bf5e6a5ae39a2a01700f1772ce}} 
+\index{Player\+Controller@{Player\+Controller}!Set\+Count\+Text@{Set\+Count\+Text}}
+\index{Set\+Count\+Text@{Set\+Count\+Text}!Player\+Controller@{Player\+Controller}}
+\subsubsection{\texorpdfstring{Set\+Count\+Text()}{SetCountText()}}
+{\footnotesize\ttfamily void Player\+Controller.\+Set\+Count\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This function displays a text that shows the amount of iems collected If the item amount is equal to 4 or greater, display \char`\"{}win and escape\char`\"{} text 
+
+\mbox{\Hypertarget{class_player_controller_ae1117d9c4da3193181cddad2c814e467}\label{class_player_controller_ae1117d9c4da3193181cddad2c814e467}} 
+\index{Player\+Controller@{Player\+Controller}!Start@{Start}}
+\index{Start@{Start}!Player\+Controller@{Player\+Controller}}
+\subsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Player\+Controller.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Item count is set to zero when the game starts and will display no win text until later If the player doesn\textquotesingle{}t exist, it creates a player Otherwise, if there is a player, the player is destroyed and replaced This is used for movement to the next scene 
+
+\mbox{\Hypertarget{class_player_controller_ae8bc83dffb99867a04be016473ed2c43}\label{class_player_controller_ae8bc83dffb99867a04be016473ed2c43}} 
+\index{Player\+Controller@{Player\+Controller}!Update@{Update}}
+\index{Update@{Update}!Player\+Controller@{Player\+Controller}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Player\+Controller.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This function is used to pause the character\textquotesingle{}s movement while dialogue is open By default, the player is static until given input Based on the keys pressed, the player will either move horizontally or vertically and will retain the direction of it\textquotesingle{}s last move until a directional button is pushed again 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_player_controller_ac646d94772588e3393eb5cb9ac02a5c4}\label{class_player_controller_ac646d94772588e3393eb5cb9ac02a5c4}} 
+\index{Player\+Controller@{Player\+Controller}!anim@{anim}}
+\index{anim@{anim}!Player\+Controller@{Player\+Controller}}
+\subsubsection{\texorpdfstring{anim}{anim}}
+{\footnotesize\ttfamily Animator Player\+Controller.\+anim\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Inlcudes the animations for the player and creates a rigidbody 
+
+\mbox{\Hypertarget{class_player_controller_a14bb057d727180f87728bd6fe62dffc9}\label{class_player_controller_a14bb057d727180f87728bd6fe62dffc9}} 
+\index{Player\+Controller@{Player\+Controller}!can\+Move@{can\+Move}}
+\index{can\+Move@{can\+Move}!Player\+Controller@{Player\+Controller}}
+\subsubsection{\texorpdfstring{can\+Move}{canMove}}
+{\footnotesize\ttfamily bool Player\+Controller.\+can\+Move}
+
+
+
+Variable for pausing movement during dialogue 
+
+\mbox{\Hypertarget{class_player_controller_a0e233eee5112d304b1bb5a118d6087e7}\label{class_player_controller_a0e233eee5112d304b1bb5a118d6087e7}} 
+\index{Player\+Controller@{Player\+Controller}!item\+Count@{item\+Count}}
+\index{item\+Count@{item\+Count}!Player\+Controller@{Player\+Controller}}
+\subsubsection{\texorpdfstring{item\+Count}{itemCount}}
+{\footnotesize\ttfamily int Player\+Controller.\+item\+Count\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+These variables are used to keep track of item collection 
+
+\mbox{\Hypertarget{class_player_controller_abb12e85ca1b12efdbc8684bff2e19c4c}\label{class_player_controller_abb12e85ca1b12efdbc8684bff2e19c4c}} 
+\index{Player\+Controller@{Player\+Controller}!move\+Speed@{move\+Speed}}
+\index{move\+Speed@{move\+Speed}!Player\+Controller@{Player\+Controller}}
+\subsubsection{\texorpdfstring{move\+Speed}{moveSpeed}}
+{\footnotesize\ttfamily float Player\+Controller.\+move\+Speed}
+
+
+
+Creates move speed for player 
+
+\mbox{\Hypertarget{class_player_controller_aee578ffd54e0e8e2f8149e2d3d1ba036}\label{class_player_controller_aee578ffd54e0e8e2f8149e2d3d1ba036}} 
+\index{Player\+Controller@{Player\+Controller}!player\+Exists@{player\+Exists}}
+\index{player\+Exists@{player\+Exists}!Player\+Controller@{Player\+Controller}}
+\subsubsection{\texorpdfstring{player\+Exists}{playerExists}}
+{\footnotesize\ttfamily bool Player\+Controller.\+player\+Exists\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Player either exists or does not 
+
+\mbox{\Hypertarget{class_player_controller_a15143b0b40abe525495279ea3cd4ba82}\label{class_player_controller_a15143b0b40abe525495279ea3cd4ba82}} 
+\index{Player\+Controller@{Player\+Controller}!player\+Moving@{player\+Moving}}
+\index{player\+Moving@{player\+Moving}!Player\+Controller@{Player\+Controller}}
+\subsubsection{\texorpdfstring{player\+Moving}{playerMoving}}
+{\footnotesize\ttfamily bool Player\+Controller.\+player\+Moving\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Player is either moving or is not 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Am/\+Documents/\+Blue\+Shells -\/ Copy/\+Blue\+Shells/\+Seniors\+Gone\+Wild/\+Assets/\+Scripts/Player\+Controller.\+cs\end{DoxyCompactItemize}
