@@ -19,7 +19,7 @@ public class CameraController : MonoBehaviour {
 
 	/// <summary>
 	/// Game will not destroy the camera on start
-	/// If no camer exists, a camera will be made
+	/// If no camera exists, a camera will be made
 	/// If camera exists, it will be destroyed and a new one will be made
 	/// </summary>
 	void Start () 

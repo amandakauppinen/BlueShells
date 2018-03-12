@@ -3,6 +3,7 @@ using System;
 using System.Data;
 using Mono.Data.Sqlite;
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine.UI;
 
 public class HighScoreManager : MonoBehaviour {

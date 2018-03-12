@@ -14,7 +14,7 @@ public class AudioManager : MonoBehaviour {
 	public static AudioManager instance;
 
 	/// <summary>
-	/// This is almost same as the start exept it's called right before. This let's us to play sounds in the start
+	/// This is almost same as the start except it's called right before. This let's us play sounds in the start
 	/// The foreach loop will loop through our sounds. Small "s" is the sound that we are currently looking for
 	/// </summary>
 	void Awake () 
