@@ -14,7 +14,7 @@ Don't forget to collect all the items<br>
 
 
 ### Screenshot two
-![gamesample](https://user-images.githubusercontent.com/33485663/37272245-c3c9d824-25de-11e8-8788-5cd328bd9c7c.PNG)
+![gamesample2](https://user-images.githubusercontent.com/33485663/37272540-9225140e-25df-11e8-951e-f3978cd25b51.PNG)
 
 ### Screenshot three
 
