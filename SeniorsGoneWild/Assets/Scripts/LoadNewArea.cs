@@ -21,7 +21,7 @@ public class LoadNewArea : MonoBehaviour {
 		//This is the trigger for the final door in the first level
 		//If the player has collected the required amount of items, the trigger will become active
 		//Afer the trigger is active, the player can move on to the next level
-		if (other.gameObject.name == "Player" && PlayerController.count == 4) 
+		if (other.gameObject.name == "Player" && PlayerController.itemCount == 4) 
 		{
 			Application.LoadLevel (levelToLoad);
 		}

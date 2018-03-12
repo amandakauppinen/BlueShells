@@ -1,19 +1,24 @@
-﻿using UnityEngine.Audio; /*This is necessary for getting access to audio settings like volume and pitch */
+﻿using UnityEngine.Audio;
 using UnityEngine;
 using System;
 
-/*this whole thing is for controlling the game sounds*/
-
+/// <summary>
+/// This script is for controlling the game audio
+/// </summary>
 public class AudioManager : MonoBehaviour {
 
+	/// <summary>
+	/// Variables for managing audio
+	/// </summary>
 	public Sound[] sounds;
-
 	public static AudioManager instance;
 
-
-	/*This is almost same as the start exept it's called right before. This let's us to play sounds in the start*/
-	void Awake () {
-
+	/// <summary>
+	/// This is almost same as the start exept it's called right before. This let's us to play sounds in the start
+	/// The foreach loop will loop through our sounds. Small "s" is the sound that we are currently looking for
+	/// </summary>
+	void Awake () 
+	{
 		if (instance == null)
 		instance = this;
 		
@@ -24,8 +29,9 @@ public class AudioManager : MonoBehaviour {
 		}
 
 		DontDestroyOnLoad (gameObject);
-		/*This foreach loop will loop through our sounds. Small "s" is the sound that we are currently looking for */
-		foreach (Sound s in sounds) {
+
+		foreach (Sound s in sounds) 
+		{
 			s.source = gameObject.AddComponent<AudioSource> ();
 			s.source.clip = s.clip;
 
@@ -35,13 +41,18 @@ public class AudioManager : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Plays first theme
+	/// </summary>
 	void Start ()
 	{
 		Play ("Theme1");
 	}
-
-
-	/*This is for other classes to find their own sound from the audio manager*/
+		
+	/// <summary>
+	/// This is for other classes to find their own sound from the audio manager
+	/// </summary>
+	/// <param name="name">Name.</param>
 	public void Play (string name)
 	{
 		Sound s = Array.Find (sounds, sound => sound.name == name);

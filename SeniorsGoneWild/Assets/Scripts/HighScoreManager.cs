@@ -7,42 +7,52 @@ using UnityEngine.UI;
 
 public class HighScoreManager : MonoBehaviour {
 
+	/// <summary>
+	/// All variables are elements used for the format of the high score appearance
+	/// </summary>
 	private string connectionString;
 	private List<HighScore> highScores = new List<HighScore> ();
 
-	public GameObject scorePrefab; 
+
+	public GameObject scorePrefab;
+	public GameObject nameDialog;
 
 	public Transform scoreParent;
 
 	public int topRanks;
-
 	public int saveScores;
 
 	public InputField enterName;
 
-	public GameObject nameDialog;
 
-
-	// Use this for initialization
-	void Start () {
+	/// <summary>
+	/// The start contains all of the functions we will use to update the high score list
+	/// This sets a path that goes directly to the database created for the game
+	/// </summary>
+	void Start () 
+	{
 		connectionString = "URI=file:" + Application.dataPath + "/HighScoreDB.db";
 
 		CreateTable ();
-		//GetScores ();
 		DeleteExtraScore();
 		ShowScores();
 	}
 
-	// Update is called once per frame
-	void Update () {
-		/*This will pop up the set name screen at the end of the game when you press esc button*/
+	/// <summary>
+	/// This is used for the "Insert Name" box
+	/// It is activated upon using the escape key
+	/// </summary>
+	void Update () 
+	{
 		if (Input.GetKeyDown(KeyCode.Escape))
 		{
 			nameDialog.SetActive(!nameDialog.activeSelf);
 		}
 	}
-
-	/*This will add all the scores to the SQL database*/
+		
+	/// <summary>
+	/// This function creates the database table inside the C# and unity files
+	/// </summary>
 	private void CreateTable()
 	{
 		using (IDbConnection dbConnection = new SqliteConnection (connectionString)) 
@@ -57,36 +67,43 @@ public class HighScoreManager : MonoBehaviour {
 				dbConnection.Close ();
 			}
 
-		}}
+		}
+	}
 	
-
+	/// <summary>
+	/// This function checks if the player has entered a name or not
+	/// It sets the player's score, taken from the NurseController
+	/// It will then enter the name, and show the previous scores
+	/// </summary>
 	public void EnterName()
 	{
 		if (enterName.text != string.Empty)
-			//this will check if the player entered a name or not
 		{
-			/*This will set up player's score. The score is given based on how many times
-			the player got busted by a nurse.*/
-			//int score = UnityEngine.Random.Range(1,500);
 			int score = NurseController.scoreCount;
 			InsertScore(enterName.text, score);
 			enterName.text = string.Empty;
-
 
 			ShowScores();
 		}
 	}
 
-
+	/// <summary>
+	/// This function compares the scores and adjusts the rankings.
+	/// Our scoreboard shows the top 10, so it removes the lowest score
+	/// instead of the highest
+	/// It opens and closes the connection to the database via SQL queries
+	/// </summary>
+	/// <param name="name">Name.</param>
+	/// <param name="newScore">New score.</param>
 	private void InsertScore(string name, int newScore)
 	{
 		GetScores ();
 		int hsCount = highScores.Count;
-		/*This will compare the scores and adjust the rankigns. Since our scoreboard shows only top 10,
-		this will remove the lowest score from the scoreboard instead of the highest one*/
-		if (highScores.Count > 0) {
+		if (highScores.Count > 0) 
+		{
 			HighScore lowestScore = highScores [highScores.Count - 1];
-			if (lowestScore != null && saveScores > 0 && highScores.Count >= saveScores && newScore > lowestScore.Score) {
+			if (lowestScore != null && saveScores > 0 && highScores.Count >= saveScores && newScore > lowestScore.Score) 
+			{
 				DeleteScore (lowestScore.ID);
 				hsCount--;
 			}
@@ -98,8 +115,8 @@ public class HighScoreManager : MonoBehaviour {
 		using (IDbConnection dbConnection = new SqliteConnection (connectionString)) 
 		{
 			dbConnection.Open ();
-				/*this is the query command that this game is using when it inputs the scores inside the database*/
-				using (IDbCommand dbCmd = dbConnection.CreateCommand ()) {
+				using (IDbCommand dbCmd = dbConnection.CreateCommand ()) 
+				{
 					string sqlQuery = String.Format ("INSERT INTO HighScores (Name, Score) values (\"{0}\",\"{1}\")", name, newScore);
 
 					dbCmd.CommandText = sqlQuery;
@@ -112,8 +129,11 @@ public class HighScoreManager : MonoBehaviour {
 
 	}
 
-
-	private void GetScores() /*This will get all the scores from the database and put them in the scoreboard*/
+	/// <summary>
+	/// This function retrieves the scores from the database and inserts them into the unity scoreboard
+	/// and then sorts them in highest-lowest order
+	/// </summary>
+	private void GetScores()
 	{
 		highScores.Clear ();
 
@@ -144,9 +164,14 @@ public class HighScoreManager : MonoBehaviour {
 		highScores.Sort ();
 
 	}
-	private void DeleteScore(int id) /*this will delete scores from the database*/
+
+	/// <summary>
+	/// This function is called upon to delete a score when a newer, higher score is
+	/// inserted into the database, thus taking it off the high score list
+	/// </summary>
+	/// <param name="id">Identifier.</param>
+	private void DeleteScore(int id)
 	{
-		//DELETE FROM HighScores WHERE PlayerID = "4"
 		using (IDbConnection dbConnection = new SqliteConnection (connectionString)) 
 		{
 			dbConnection.Open ();
@@ -163,6 +188,14 @@ public class HighScoreManager : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// This function is used to destroy all of the scores, in order to reinsert
+	/// them into the database to ensure that no repeats are made
+	/// It changes the scoreboard information, and inserts a "#" before the rank
+	/// It also includes "i + 1" which starts the ranks from 1 instead of 0
+	/// It includes organizational elements such as the prefab and parent items
+	/// which is where the scores are inserted
+	/// </summary>
 	private void ShowScores() 
 	{
 		GetScores ();
@@ -176,20 +209,20 @@ public class HighScoreManager : MonoBehaviour {
 		{
 			if (i <= highScores.Count -1)
 			{
-				
 			GameObject tmpObject = Instantiate(scorePrefab);
 			HighScore tmpScore = highScores[i];
 
 			tmpObject.GetComponent<HighScoreScript> ().SetScore(tmpScore.Name, tmpScore.Score.ToString(), "#" + (i + 1).ToString ());
-			//changes scoreboard information. Puts # Before the rank number. 
-			//i +1 means 0+1, so it's gonna start ranks from 1 instead of 0 and it will keep increasing it by 1.
-
 			tmpObject.transform.SetParent(scoreParent);
-			//tmpObject.GetComponent<RectTransform> ().localScale = new Vector3 (1, 1, 1);
+			tmpObject.GetComponent<RectTransform> ().localScale = new Vector3 (1, 1, 1);
 			}
 		}
 	}
-	private void DeleteExtraScore() /*this will delete extra scores from the database*/
+
+	/// <summary>
+	/// Deletes extra scores from the database based on our limit
+	/// </summary>
+	private void DeleteExtraScore()
 	{
 		GetScores ();
 		if (saveScores <= highScores.Count) 
@@ -209,8 +242,6 @@ public class HighScoreManager : MonoBehaviour {
 
 						dbCmd.CommandText = sqlQuery;
 						dbCmd.ExecuteScalar ();
-				
-
 					}
 					dbConnection.Close ();
 				}
@@ -218,6 +249,3 @@ public class HighScoreManager : MonoBehaviour {
 		}
 	}
 }
-
-
-

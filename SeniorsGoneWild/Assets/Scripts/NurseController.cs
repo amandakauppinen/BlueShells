@@ -4,49 +4,75 @@ using UnityEngine;
 
 public class NurseController : MonoBehaviour {
 
-	//Declares a moving speed for the nurse
+	/// <summary>
+	/// Declares a moving speed for the nurse
+	/// </summary>
 	public float moveSpeed;
 
-	//Declares a rigid body for the nurse
+	/// <summary>
+	/// Declares a rigid body for the nurse
+	/// </summary>
 	private Rigidbody2D myRigidBody;
 
-	//The nurse is either moving or is not
+	/// <summary>
+	/// The nurse is either moving or is not
+	/// </summary>
 	private bool moving;
 
-	//Because the nurse movement is random, the code 
-	//needs a counter in between the randomized moves
-	//before the nurse will be set to move again
+	/// <summary>
+	/// Because the nurse movement is random, the code 
+	/// needs a counter in between the randomized moves
+	/// before the nurse will be set to move again
+	/// </summary>
 	public float timeBetweenMove;
 	private float timeBetweenMoveCounter;
 
-	//These set how long the nurse will be moving
+	/// <summary>
+	/// These set how long the nurse will be moving
+	/// </summary>
 	public float timeToMove;
 	private float timeToMoveCounter;
 
-	//Sets a moving direction for the nurse
+	/// <summary>
+	/// Sets a moving direction for the nurse
+	/// </summary>
 	private Vector3 moveDirection;
 
-	//This is for the character interation when caught by a nurse
-	//The character will reload, and there is a timer for that
+	/// <summary>
+	/// This is for the character interation when caught by a nurse
+	/// The character will reload, and there is a timer for that
+	/// </summary>
 	public float waitToBeload;
 	private bool reloading;
 
-	//Includes the Player object
+	/// <summary>
+	/// Includes the Player object
+	/// </summary>
 	private GameObject thePlayer;
 
-	//Used to add points to the score
+	/// <summary>
+	/// This is used to set a baseline for the scoring system
+	/// </summary>
 	public static int scoreCount = 500;
 
+	/// <summary>
+	/// This function gives a rigid body to nurse
+	/// It also sets a random time in between nurse movements
+	/// </summary>
 	void Start () 
 	{
-		//Gives a rigid body to the nurse
 		myRigidBody = GetComponent<Rigidbody2D> ();
 
-		//Sets a random time between nurse movements
 		timeBetweenMoveCounter = Random.Range (timeBetweenMove * 0.75f, timeBetweenMove * 1.25f);
 		timeToMoveCounter = Random.Range (timeToMove * 0.75f, timeBetweenMove * 1.25f);
 	}
 
+	/// <summary>
+	/// If the timeToMoveCounter goes below zero, the nurse will
+	/// stop moving for a random amount of time
+	/// If the player is caught (waitToBeload <0), player will be reset to the 
+	/// beginning of the level and become active again
+	/// </summary>
 	void Update () 
 	{
 		if (moving) 
@@ -54,8 +80,6 @@ public class NurseController : MonoBehaviour {
 			timeToMoveCounter -= Time.deltaTime;
 			myRigidBody.velocity = moveDirection;
 
-			//If timeToMoveCounter goes below zero, the nurse will 
-			//stop moving for a random amount of time
 			if (timeToMoveCounter < 0f) 
 			{
 				moving = false;
@@ -77,8 +101,6 @@ public class NurseController : MonoBehaviour {
 		}
 		if (reloading) 
 		{
-			//If the player is caught (waitToBeload <0), player will be reset to the 
-			//beginning of the level and become active again
 			waitToBeload -= Time.deltaTime;
 			if (waitToBeload < 0) 
 			{
@@ -88,10 +110,15 @@ public class NurseController : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// If the player is caught by a nurse, he will become inactive
+	/// and relaod. He will also have points added for every nurse
+	/// contact. It also includes the sound that will be played
+	/// on nurse contact.
+	/// </summary>
+	/// <param name="other">Other.</param>
 	void OnCollisionEnter2D(Collision2D other)
 	{
-		//If the player is caught, he will become inactive and reload
-		//he will also have points added for every nurse contact
 		if (other.gameObject.name == "Player")
 		{
 			other.gameObject.SetActive(false);
@@ -99,7 +126,7 @@ public class NurseController : MonoBehaviour {
 			thePlayer = other.gameObject;
 			scoreCount = scoreCount - 10;
 
-			FindObjectOfType<AudioManager> ().Play ("Busted"); /*this is needed for playing the sound when you hit an enemy*/
+			FindObjectOfType<AudioManager> ().Play ("Busted");
 		}
 	}
 }

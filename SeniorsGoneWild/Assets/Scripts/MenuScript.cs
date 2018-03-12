@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class MenuScript : MonoBehaviour
 {
+	/// <summary>
+	/// Script attached to teh play button in MainMenu for starting the game at Level 1
+	/// </summary>
 	public void StartGame()
 	{
-		//Script attached to play button in MainMenu for starting the game at Level 1
 		Application.LoadLevel("Level 1");
 	}
 }

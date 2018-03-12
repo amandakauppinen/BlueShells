@@ -377,11 +377,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scorePrefab: {fileID: 1992814028419714, guid: 15307eb6211f5134686d16e18cc993d3,
     type: 2}
+  nameDialog: {fileID: 539445628}
   scoreParent: {fileID: 629575145}
   topRanks: 10
   saveScores: 10
   enterName: {fileID: 785095085}
-  nameDialog: {fileID: 539445628}
 --- !u!4 &377749850
 Transform:
   m_ObjectHideFlags: 0
@@ -705,7 +705,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.17741, y: -4.434999}
+  m_AnchoredPosition: {x: -19.4, y: -4.434999}
   m_SizeDelta: {x: 812.73, y: 218.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &707589200
@@ -913,7 +913,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 101.5, y: -4.875}
+  m_AnchoredPosition: {x: 133.9, y: -4.875}
   m_SizeDelta: {x: 974.78, y: 219.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &848245202
@@ -1359,7 +1359,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -62, y: -4.435}
+  m_AnchoredPosition: {x: -132.2, y: -4.435}
   m_SizeDelta: {x: 849.04, y: 214.53}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1192634113

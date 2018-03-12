@@ -4,7 +4,12 @@ using UnityEngine;
 using System;
 
 public class HighScore : IComparable<HighScore>
-//the IComparable command is for sorting the scores
+
+/// <summary>
+/// Creates Score, Name, and ID variables for the database
+/// IComparable command used for sorthing the scores
+/// </summary>
+/// <value>The score.</value>
 {
 	public int Score {get;set;}
 	public string Name { get; set; }
@@ -19,21 +24,27 @@ public class HighScore : IComparable<HighScore>
 		//this.Date = date;
 
 	}
+
+	/// <summary>
+	/// Function used to compare the scores in order to sort and delete later on
+	/// first > second return -1
+	/// first < second return 1
+	/// first == second return 0
+	/// </summary>
+	/// <returns>The to.</returns>
+	/// <param name="other">Other.</param>
 	public int CompareTo(HighScore other)
 	{
-		//first > second return -1
-		//first < second return 1
-		//first == second returrn 0
-
 		if (other.Score < this.Score)
 		{
 			return -1;
-			}
+		}
 
 		else if (other.Score > this.Score)
 		{
 			return 1;
-			}
+		}
+
 		return 0;
 	}
 

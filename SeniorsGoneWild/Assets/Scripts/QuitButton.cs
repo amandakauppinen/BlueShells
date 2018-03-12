@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 public class QuitButton : MonoBehaviour
 {
+	/// <summary>
+	/// This function attaches to the quit button in the MainMenu
+	/// used for exiting the game entirely
+	/// </summary>
 	public void ExitGame()
 	{
-		//Script attached to quit button in MainMenu for exiting the game
 		Application.Quit();
 	}
 }

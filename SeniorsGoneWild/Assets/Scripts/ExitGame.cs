@@ -16,11 +16,13 @@ public class ExitGame : MonoBehaviour {
 
 	}
 
+	/// <summary>
+	/// Fucntion used for the final game exit, attached to the final door in the third level
+	/// If the player reaches the final door, it will load Credits
+	/// </summary>
+	/// <param name="other">Other.</param>
 	void OnTriggerEnter2D (Collider2D other)
 	{
-		//Script used for the final game exit, attached to the final door in the second level
-		//If the player reaches the final door, it will load EndScene
-		if (other.gameObject.name == "Player") 
 		{
 			Application.LoadLevel ("EndScene");
 		}

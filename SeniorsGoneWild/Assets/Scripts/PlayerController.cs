@@ -5,41 +5,56 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
-	//Creates move speed for player
+	/// <summary>
+	/// Creates move speed for player
+	/// </summary>
 	public float moveSpeed;
 
-	//Includes the animations for the player and creates a rigidbody
+	/// <summary>
+	/// Inlcudes the animations for the player and creates a rigidbody
+	/// </summary>
 	private Animator anim;
 	private Rigidbody2D myRigidbody;
 
-	//Player is either moving or not
+	/// <summary>
+	/// Player is either moving or is not
+	/// </summary>
 	private bool playerMoving;
 	public Vector2 lastMove;
 
-	//Player either exists or does not
+	/// <summary>
+	/// Player either exists or does not
+	/// </summary>
 	private static bool playerExists;
 
-	//Count, counText and winText are used for to keep track of item collection
-	public static int count;
+	/// <summary>
+	/// These variables are used to keep track of item collection
+	/// </summary>
+	public static int itemCount;
 	public Text countText;
 	public Text winText;
 
+	/// <summary>
+	/// Variable for pausing movement during dialogue
+	/// </summary>
 	public bool canMove;
 
+	/// <summary>
+	/// Item count is set to zero when the game starts and will
+	/// display no win text until later
+	/// If the player doesn't exist, it creates a player
+	/// Otherwise, if there is a player, the player is destroyed and replaced
+	/// This is used for movement to the next scene
+	/// </summary>
 	void Start () 
 	{
-		//Count is set to zero and will display nothing until first item is collected
-		count = 0;
+		itemCount = 0;
 		winText.text = "";
-		//SetCountText ();
+		SetCountText ();
 
-		//retrieves animator and rigidbody for Player
 		anim = GetComponent<Animator> ();
 		myRigidbody = GetComponent<Rigidbody2D> ();
 
-		//If the player doesn't exist, it creates a player
-		//Otherwise, if there is a player, the player is destroyed and replaced with a new one
-		//This is for movement to the next level (scene)
 		if (!playerExists) 
 		{
 			playerExists = true;
@@ -50,30 +65,32 @@ public class PlayerController : MonoBehaviour {
 			Destroy (gameObject);
 		}
 	}
-		
+
+	/// <summary>
+	/// This function is used to pause the character's movement
+	/// while dialogue is open
+	/// By default, the player is static until given input
+	/// Based on the keys pressed, the player will either move horizontally
+	/// or vertically and will retain the direction of it's last move until
+	/// a directional button is pushed again
+	/// </summary>
 	void Update () 
 	{
 
-	if (!canMove)
-	{
+		if (!canMove)
+		{
 		return;
-	}
-
-
-		//By default, Player is static until given input
+		}
+			
 		playerMoving = false;
 
-		//If input keys are left or right, the player will move horizontally and
-		//hold it's last position until affected by movement again
 		if (Input.GetAxisRaw ("Horizontal") > 0.5f || Input.GetAxisRaw ("Horizontal") < -0.5f) 
 		{
 			myRigidbody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * moveSpeed, myRigidbody.velocity.y);
 			playerMoving = true;
 			lastMove = new Vector2 (Input.GetAxisRaw ("Horizontal"), 0f);
 		} 
-
-		//If input keys are up or down, the player will move vertically and
-		//hold it's last position until affected by movement again
+			
 		if (Input.GetAxisRaw ("Vertical") > 0.5f || Input.GetAxisRaw ("Vertical") < -0.5f) 
 		{
 			myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, Input.GetAxisRaw("Vertical") * moveSpeed);
@@ -99,25 +116,31 @@ public class PlayerController : MonoBehaviour {
 		anim.SetFloat("LastMoveY", lastMove.y);
 	}
 
+	/// <summary>
+	/// If items are collected, 1 is added to the count
+	/// A sound will be played upon item collection
+	/// </summary>
+	/// <param name="other">Other.</param>
 	void OnTriggerEnter2D(Collider2D other) 
 	{
-		//If items are collected, add 1 to the count
 		if (other.gameObject.CompareTag("Items"))
 		{
 			other.gameObject.SetActive(false);
-			count = count + 1;
-			//SetCountText ();
+			itemCount = itemCount + 1;
+			SetCountText ();
 
-			FindObjectOfType<AudioManager> ().Play ("Item"); /*This will play a sound when you collect an item*/
+			FindObjectOfType<AudioManager> ().Play ("Item");
 		}
 	}
 
-	/*void SetCountText()
+	/// <summary>
+	/// This function displays a text that shows the amount of iems collected
+	/// If the item amount is equal to 4 or greater, display "win and escape" text
+	/// </summary>
+	void SetCountText()
 	{
-		//Display a text that shows the amount of items collected
-		//If the item amount is equal to 4 or greater, display "win and escape" text
 		//countText.text = "Item Count: " + count.ToString ();
-		if (count >= 4)
+		if (itemCount >= 4)
 			winText.text = "You've collected all your items! Now hurry and escape!";
-	}*/
+	}
 }
