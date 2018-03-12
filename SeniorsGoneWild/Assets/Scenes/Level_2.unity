@@ -586,6 +586,7 @@ GameObject:
   m_Component:
   - component: {fileID: 29637841}
   - component: {fileID: 29637842}
+  - component: {fileID: 29637843}
   m_Layer: 0
   m_Name: WallsFloors_8 (3)
   m_TagString: Untagged
@@ -650,6 +651,31 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!61 &29637843
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 29637840}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.9134681}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.72, y: 2.72}
+    newSize: {x: 2.72, y: 2.72}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.72, y: 0.893064}
+  m_EdgeRadius: 0
 --- !u!1 &33147216
 GameObject:
   m_ObjectHideFlags: 0
@@ -13736,6 +13762,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1063013456}
   - component: {fileID: 1063013457}
+  - component: {fileID: 1063013458}
   m_Layer: 0
   m_Name: WallsFloors_4 (7)
   m_TagString: Untagged
@@ -13800,6 +13827,31 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!61 &1063013458
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1063013455}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 5.6641684}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.02, y: 2.72}
+    newSize: {x: 1.02, y: 2.72}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.02, y: 14.048338}
+  m_EdgeRadius: 0
 --- !u!1 &1067885055
 GameObject:
   m_ObjectHideFlags: 0
@@ -14461,6 +14513,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1099606005}
   - component: {fileID: 1099606006}
+  - component: {fileID: 1099606007}
   m_Layer: 0
   m_Name: WallsFloors_8 (2)
   m_TagString: Untagged
@@ -14525,6 +14578,31 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!61 &1099606007
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1099606004}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.92225146}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.72, y: 2.72}
+    newSize: {x: 2.72, y: 2.72}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.72, y: 0.87549734}
+  m_EdgeRadius: 0
 --- !u!1 &1110715596
 GameObject:
   m_ObjectHideFlags: 0
@@ -17844,6 +17922,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1455804087}
   - component: {fileID: 1455804088}
+  - component: {fileID: 1455804089}
   m_Layer: 0
   m_Name: WallsFloors_5
   m_TagString: Untagged
@@ -17908,6 +17987,31 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!61 &1455804089
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1455804086}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.02, y: 2.72}
+    newSize: {x: 1.02, y: 2.72}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.02, y: 2.72}
+  m_EdgeRadius: 0
 --- !u!1 &1457708425
 GameObject:
   m_ObjectHideFlags: 0
@@ -17917,6 +18021,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1457708426}
   - component: {fileID: 1457708427}
+  - component: {fileID: 1457708428}
   m_Layer: 0
   m_Name: WallsFloors_4
   m_TagString: Untagged
@@ -17981,6 +18086,31 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!61 &1457708428
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1457708425}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -2.6630611}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.02, y: 2.72}
+    newSize: {x: 1.02, y: 2.72}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.02, y: 8.0461235}
+  m_EdgeRadius: 0
 --- !u!1 &1458468466
 GameObject:
   m_ObjectHideFlags: 0
@@ -23116,6 +23246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1960172084}
   - component: {fileID: 1960172085}
+  - component: {fileID: 1960172086}
   m_Layer: 0
   m_Name: WallsFloors_8 (6)
   m_TagString: Untagged
@@ -23180,6 +23311,31 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!61 &1960172086
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1960172083}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.93981814}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.72, y: 2.72}
+    newSize: {x: 2.72, y: 2.72}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.72, y: 0.840364}
+  m_EdgeRadius: 0
 --- !u!1 &1960428628
 GameObject:
   m_ObjectHideFlags: 0
@@ -24168,6 +24324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2046966100}
   - component: {fileID: 2046966099}
+  - component: {fileID: 2046966101}
   m_Layer: 0
   m_Name: New Piskel (8)_0
   m_TagString: Untagged
@@ -24232,6 +24389,31 @@ Transform:
   m_Father: {fileID: 810142807}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 180.04399, z: 0}
+--- !u!61 &2046966101
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2046966098}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.8844621}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.71, y: 2.72}
+    newSize: {x: 2.71, y: 2.72}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.71, y: 0.95107603}
+  m_EdgeRadius: 0
 --- !u!1 &2047606674
 GameObject:
   m_ObjectHideFlags: 0
@@ -25382,6 +25564,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2132121433}
   - component: {fileID: 2132121432}
+  - component: {fileID: 2132121434}
   m_Layer: 0
   m_Name: WallsFloors_7
   m_TagString: Untagged
@@ -25446,6 +25629,31 @@ Transform:
   m_Father: {fileID: 490824121}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &2132121434
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2132121431}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.91346765}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.72, y: 2.72}
+    newSize: {x: 2.72, y: 2.72}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.72, y: 0.893065}
+  m_EdgeRadius: 0
 --- !u!1 &2141752778
 GameObject:
   m_ObjectHideFlags: 0
